@@ -20,8 +20,25 @@
                 padding: 30px;
             }
             #start-screen div { margin-top: 30px; width: 400px; }
+            #story, #message { margin-bottom: 30px; width: 400px; }
             #screen { display: none; }
             input { margin: 20px 0;}
+            #monster-stat img {
+                width: 100px;
+                transition: 1s;
+            }
+            #monster-stat img:hover {
+                transform: scale(1.5);
+            }
+            #name-input {
+                background: transparent;
+                border: none;
+                height: 25px;
+                text-align: center;
+                color: ivory;
+                font-size: 15px;
+                font-weight: bold;
+            }
         </style>    
     </head>
     <body>
@@ -29,13 +46,18 @@
             <h3>어두운 바다의 등불이 되어 - 연산호</h3>
             <h5>팬게임 텍스트 RPG</h5>            
             <div>당신은 한국, 미국, 캐나다, 호주, 뉴질랜드, 러시아, 일본, 중국 총 8개국이 건설한
-                 해저 3000m의 북태평양해저기지(NPIUS)에 입사하였다.
-                <br/><br/>당신의 이름은?</div>
-            <input id="name-input" placeholder=""/>
-            <button id="start">시작</button>
+                 해저 3000m의 북태평양해저기지(NPIUS)에 입사하였다. <br/><br/>
+                 제주 해군기지에 해저기지 합격 서류를 낸 후 사흘간 배와 헬기를 통해 이동한
+                 당신은 대한도에서 프리야 쿠마리를 만났다. 당신은 NEP에 가입 서명 해야한다.
+                <br/><br/>서명하시겠습니까?</div>
+            <input id="name-input" placeholder="성명"/>
+            <button id="start">서명</button>
             <h5>* 대사 스포일러가 있습니다.</h5>
         </form>
         <div id="screen">
+            <div id="story">
+                당신은 서명을 마치고 제4해저기지로 발걸음을 향했다.
+            </div>
             <div id="hero-stat">
                 <span id="hero-name"></span>
                 <span id="hero-level"></span>
@@ -45,23 +67,23 @@
             </div>
             <form id="game-menu" style="display: none;">
                 <div id="menu-1">1.모험</div>
-                <div id="menu-2">2.무현쌤, 금이씨와 빵먹기(체력 회복)</div>
+                <div id="menu-2">2.무현쌤과 얘기하기(체력 회복)</div>
                 <div id="menu-3">3.종료</div>
                 <input id="menu-input" />
                 <button id="menu-button">입력</button>
             </form>
             <form id="battle-menu" style="display: none;">
-                <div id="battle-1">1.공격</div>
-                <div id="battle-2">2.회복(체력 +20)</div>
+                <div id="battle-1">1.대결</div>
+                <div id="battle-2">2.금이씨와 얘기하기(체력 +20)</div>
                 <div id="battle-3">3.도망</div>
                 <input id="battle-input" />
                 <button id="battle-button">입력</button>
             </form>
             <div id="message"></div>
             <div id="monster-stat">
-                <!--<div style="margin:5px;">
-                    <img src="./sin.jpg" style="width:100px;">
-                </div>-->
+                <div id="monster-img" style="margin:5px;">
+                    <img src="./sin.jpg">
+                </div>
                 <span id="monster-line"></span>
                 <br/>
                 <span id="monster-name"></span>
@@ -79,6 +101,7 @@
             const $heroHp = document.querySelector('#hero-hp');
             const $heroXp = document.querySelector('#hero-xp');
             const $heroAtt = document.querySelector('#hero-att');
+            const $monsterImg = document.querySelector('#monster-img');
             const $monsterName = document.querySelector('#monster-name');
             const $monsterHp = document.querySelector('#monster-hp');
             const $monsterAtt = document.querySelector('#monster-att');
@@ -121,11 +144,13 @@
                         $gameMenu.style.display = 'block';
                         $screen.style.display = 'block';
                         $battleMenu.style.display = 'none';
+                        $monsterImg.style.display = 'none';
                     } else if(screen === 'battle') {
                         $startScreen.style.display = 'none';
                         $gameMenu.style.display = 'none';
                         $screen.style.display = 'block';
                         $battleMenu.style.display = 'block';
+                        $monsterImg.style.display = 'block';
                     }
                 }
                 clearInputs() {
@@ -147,7 +172,7 @@
                     } else if (input === '2') { //휴식
                         this.hero.hp = this.hero.maxHp;
                         this.updateHeroStat();
-                        this.showMessage('충분한 휴식을 취했다.');
+                        this.showMessage(`무현쌤이 노을이를 안겨주었다. "가끔 햇빛이 모자라면 빌려드릴게요."`);
                     } else if (input === '3') { //종료
                         this.showMessage(' ');
                         this.quit();
@@ -161,7 +186,7 @@
                         hero.attack(monster);
                         monster.attack(hero);
                         if (hero.hp <= 0) {
-                            this.showMessage(`${hero.lev} 레벨에서 전사. 새 주인공을 생성하세요.`);
+                            this.showMessage(`${hero.lev} 레벨에서 패배. 새 주인공을 생성하세요.`);
                             this.quit();
                         } else if (monster.hp <= 0) {
                             this.showMessage(`${monster.name}을/를 이겨 ${monster.xp} 경험치를 얻었다`);
@@ -177,7 +202,7 @@
                         const { hero, monster } = this;
                         hero.hp = Math.min(hero.maxHp, hero.hp + 20);
                         monster.attack(hero);
-                        this.showMessage('체력을 조금 회복했다.');
+                        this.showMessage(`유금이 "이미 걸어온 길을 바꿀 수는 없죠. 후회하지 마세요. 훌쩍. 어차피 후회한다고 해도 더 좋은 수가 생기는 건 아니니까요."`);
                         this.updateHeroStat();
                     } else if (input === '3') {
                         this.clearInputs();
