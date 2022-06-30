@@ -5,6 +5,7 @@ root-context.xml
 
 ### AWS ###
 abd-pwd.pem 
+abd-pwd.ppk
 
 ### Eclipse ###
 .metadata

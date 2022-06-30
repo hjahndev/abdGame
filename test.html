@@ -11,7 +11,7 @@
             font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
             -webkit-overflow-scrolling: touch;
             color: #555;
-            background-image: url(./abd.jpg);
+            background-image: url(./images/abd.jpg);
         }
         .world {
             position: absolute;
@@ -45,21 +45,21 @@
         .wall-back {
             height: 300vw;
             transform: translate3d(0, 0, -15vw);
-            background-image: url(./abd.jpg);
+            background-image: url(./images/abd.jpg);
             background-size: cover;
             padding: 0 100px;
         }
         .wall-left {
             width: 30vw;
             height: 300vw;
-            background: url(./abd.jpg);
+            background: url(./images/abd.jpg);
             background-size: cover;
             transform: rotateY(-90deg) translate3d(0px, 0px, 10vw);
         }
         .wall-right {
             width: 30vw;
             height: 300vw;
-            background: url(./abd.jpg);
+            background: url(./images/abd.jpg);
             background-size: cover;
             transform: rotateY(-90deg) translate3d(0, 0, -80vw);
         }
@@ -75,7 +75,7 @@
             color: ivory;
         }
         .wall-title {
-            font-size: 3rem;
+            font-size: 1.3rem;
         }
         #start-screen, #screen {
             height: 80vh;
@@ -111,38 +111,35 @@
         <div class="stage">
             <div class="house">
                 <section class="wall wall-back">
-                    <form id="start-screen">
-                        <h3>어두운 바다의 등불이 되어 - 연산호</h3>
-                        <h5>팬게임 텍스트 RPG</h5>            
-                        <div>당신은 한국, 미국, 캐나다, 호주, 뉴질랜드, 러시아, 일본, 중국 총 8개국이 건설한
-                             해저 3000m의 북태평양해저기지(NPIUS)에 입사하였다. <br/><br/>
-                             제주 해군기지에 해저기지 합격 서류를 낸 후 사흘간 배와 헬기를 통해 이동한
-                             당신은 대한도에서 프리야 쿠마리를 만났다. 당신은 NEP에 가입 서명 해야한다.
-                            <br/><br/>서명하시겠습니까?</div>
-                        <input id="name-input" placeholder="성명"/>
-                        <button id="start">서명</button>
-                        <h5>* 대사 스포일러가 있습니다.</h5>
+                    <form id="start-screen">           
+                        <div>
+                            축하합니다! 당신은 해저기지 입사 절차를 모두 마쳤습니다.
+                        <br /><br />프리야 쿠마리가 당신에게 인사를 건넵니다. "해저기지 인원이 된 걸 환영합니다."
+                        <br /><br />당신은 제 4해저기지로 가는 엘레베이터에 탑승했습니다. 
+                        </div>
+        
                     </form>
                 </section>
                 <section class="wall wall-left"></section>
                 <section class="wall wall-right"></section>
                 <section class="wall wall-front wall-front-a">
                     <div class="wall-content">
-                        <h2 class="wall-title">-200m 제1해저기지</h2>
+                        <h2 class="wall-title">-50m. 제1해저기지 </h2>
+                        <p>그분께서는 당신의 주변으로 빛을 퍼트리시고, 바다의 밑바닥을 빛으로 덮으십니다.</p>
                     </div>
                 </section>
                 <section class="wall wall-front wall-front-b">
                     <div class="wall-content">
-                        <h2 class="wall-title">-1000m 제2해저기지</h2>
+                        <h2 class="wall-title">-200m. 제2해저기지</h2>
                     </div>
                 </section>
                 <section class="wall wall-front wall-front-c">
                     <div class="wall-content">
-                        <h2 class="wall-title">-3000m 제3해저기지</h2>
+                        <h2 class="wall-title">-1000m. 제3해저기지</h2>
                     </div>
                 </section>
                 <section class="wall wall-front wall-front-d">
-                    <div class="wall-content">-6000m 제4해저기지 도착.<br/>
+                    <div class="wall-content">-3000m. 제4해저기지에 도착했습니다.<br/>
                         "육지에서 사는 생물들은 언제나 바다를 그리워하지만 그 바닷물에 잠긴 순간 돌아갈 수 없다."
                     </div>
                 </section>
