@@ -31,6 +31,16 @@ body {
     font-weight: 200;
     margin: 20px 0;
 }
+#npius {
+    display: none;
+    margin-top: 20px;
+}
+#openMail {
+    color: black;
+    text-decoration-line: none;
+    display: block;
+    margin-top: 20px;
+}
 #name-input {
     background: transparent;
     border: none;
@@ -40,7 +50,7 @@ body {
     font-weight: bold;
 } 
 input { margin: 20px 0;}
-a {
+#sign {
     background: transparent;
     padding: 3px 10px;
     border-radius: 5px;

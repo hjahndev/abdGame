@@ -14,17 +14,20 @@
             <h2>어두운 바다의 등불이 되어 - 연산호</h2>
             <h5>팬게임 텍스트 RPG (주의: 스포일러가 있습니다.)</h5>        
             <div>
-                <p>21세기 말, 대한민국 국적을 가진 당신은 어느날 한 통의 메일을 수신하였습니다.</p> 
-                
-                <p id="letter-content"></p>
-
-                <p>당신은 제주 해군기지에 가서 해저기지 합격 서류를 낸 후 사흘간 배와 헬기를 통해 대한도로
-                    이동하였습니다. 프리야 쿠마리는 당신에게 NEP 가입 서류 뭉치를 내밀었습니다.</p>
-                    
-                <p>서명을 마치면 당신은 바로 제 4해저기지의 백호동에 짐을 풀고 해저기지 생활을 시작해야 합니다.</p>
-                <p>서명하시겠습니까?</p>
-            <input id="name-input" placeholder="성명"/>
-            <a href="./02.html">서명</a>
+                <p id="explanation">21세기 말, 대한민국 국적을 가진 당신은 어느날 한 통의 메일을 수신하였습니다.</p> 
+                <a href="#" id="openMail">발신자: North Pacific International Undersea Station</a>
+                <div id="npius">     
+                    <p id="letter-content"></p>
+                    <audio id="typingSound" src="./audio/typingSound.mp3"></audio>
+    
+                    <p>당신은 제주 해군기지에 가서 해저기지 합격 서류를 낸 후 사흘간 배와 헬기를 통해 대한도로
+                        이동하였습니다. 프리야 쿠마리는 당신에게 NEP 가입 서류 뭉치를 내밀었습니다.</p>
+                        
+                    <p>서명을 마치면 당신은 바로 제 4해저기지의 백호동에 짐을 풀고 해저기지 생활을 시작해야 합니다.</p>
+                    <p>서명하시겠습니까?</p>
+                    <input id="name-input" placeholder="성명"/>
+                    <a id="sign" href="./02.html">서명</a>
+                </div>
         </div>
     </div>
     <script src="./js/start.js"></script>
