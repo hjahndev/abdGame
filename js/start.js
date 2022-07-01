@@ -1,21 +1,16 @@
 (function() {
-    $startBtn = document.querySelector('#start');
-    $startScreen = document.querySelector('#start-screen');
-    
-    $startBtn.addEventListener('click', function(e) {
-    $startScreen.innerHTML = `당신은 서명을 마치고 제4해저기지로 발걸음을 향했다.`;
-    
-        const scrollDown = setInterval(()=>{
-            let pageYOffset = window.pageYOffset;
-            console.log(pageYOffset);
-            window.scrollTo(0, pageYOffset + 50);
+    const $letterContent = document.querySelector('#letter-content');
+    const letter = `축하드립니다. 귀하께서는 한국, 미국, 캐나다, 호주, 뉴질랜드, 러시아, 일본, 
+    중국 총 8개국이 건설한 해저 3000m의 북태평양해저기지(NPIUS)에 합격하였습니다.`
+    const length = letter.length;
+    const letterArr = letter.split('');
+    let charCount = 0;
 
-            if(pageYOffset > 2100) {
-                clearInterval(scrollDown);
-            }
-        }, 250);
-        
-        
-     
-    });
+    const typeLetter = setInterval(()=>{
+        $letterContent.innerText = letterArr.slice(0, charCount).join('');
+        charCount++;
+        if(charCount > length) {
+            clearInterval(typeLetter);
+        }
+    }, 100);
 })();

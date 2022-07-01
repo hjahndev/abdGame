@@ -1,3 +1,4 @@
+/* 01.html */
 body {
     font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
     -webkit-overflow-scrolling: touch;
@@ -35,7 +36,6 @@ body {
     border: none;
     height: 25px;
     text-align: center;
-    color: ivory;
     font-size: 1.3rem;
     font-weight: bold;
 } 
@@ -47,6 +47,7 @@ a {
     font-size: 1.3rem;
     color: black;
 }
+/* 02.html */
 /* .world {
     position: absolute;
     left: 0;
