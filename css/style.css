@@ -131,3 +131,116 @@ input { margin: 20px 0;}
 }
 #start-screen div { margin-top: 30px; width: 600px; }
 */
+/*03.html*/
+.script {
+    width:100vw;
+    height:100vh;
+    padding: 0 30px;
+    background: url(../images/fourFloor.jpg);
+    background-size: cover;
+    color: ivory;
+    line-height: 35px;
+    overflow-x: hidden;
+}
+select, input {
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 15px 0;
+    min-width: 200px;
+}
+.menu {
+    height: 50px;
+    border-bottom: 1px solid ivory;
+    font-size: 0.9rem;
+}
+.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+}
+.menu-item {
+    margin-right: 3em;
+}
+.developer-information {
+    margin-left: auto;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+.button-nav {
+    text-align: right;
+    display:flex; 
+    justify-content:right;
+    height: 50px;
+}
+section {
+    display:flex;
+}
+.battle-content {
+    width: 50%;
+    min-width: 600px;
+}
+.pin {
+    width: 2px;
+    height: 100px;
+    background-color: ivory;
+}
+.dong-name {
+    font-weight: 500;
+    padding-left: 0.5rem;
+    border-top: 2px solid ivory;
+    min-width: 60px;
+}
+#blue-dragon, #black-tortoise {
+    display:flex; 
+    width:30%; 
+    min-width:500px; 
+}
+#red-bird, #white-tiger {
+    display:flex; 
+    width:20%;
+}
+.button-character {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button-character.pmh {
+    background-image: url('../images/pmh.png');
+    background-size: 50px auto;
+}
+.button-character.ygy {
+    background-image: url('../images/ygy.png');
+    background-size: 50px auto;
+}
+.button-character.shr {
+    background-image: url('../images/shr.png');
+    background-size: 50px auto;
+}
+.button-character.sgh {
+    background-image: url('../images/sgh.png');
+    background-size: 50px auto;
+}
+.button-character.pay {
+    background-image: url('../images/pay.png');
+    background-size: 50px auto;
+}
+.hp-bar {
+    width:40px;
+    margin-right:10px;
+    height: 5px;
+    background-color:aqua;
+    border-radius: 30%;
+}
+.hp-bar .hp {
+    width:30%;
+    height: 5px;
+    background-color:red;
+    border-radius: 30%;
+}
