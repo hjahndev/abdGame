@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        
+        .player-section {
+            display:block;
+        }
+        .player-stat {
+            width: 40%; 
+            padding: 10px; 
+            text-align: center; 
+            border: 1px solid gray;
+        }
     </style>
 </head>
 <body>
@@ -18,7 +26,7 @@
                 <a class="menu-item" id="stat" href="#">스탯 보기</a>
                 <a class="menu-item" id="items" href="#">아이템 보기</a>
                 <a class="menu-item" id="hint" href="#">게임 설명</a>
-                <a class="developer-information" href="#">제작자 정보</a>
+                <a class="menu-item developer-information" id="dev" href="#">제작자 정보</a>
             </nav>
         </nav>
         <nav class="button-nav">
@@ -49,7 +57,9 @@
                     <option>청룡동 탈출정 확인</option>
                 </select>
                 <button id="selectBtn">선택</button>
-                <p>쾅! 엔지니어 O팀이 소총을 들고 당신들을 공격합니다!</p>
+                <p>
+                    <strong style="color:red;">쾅! 엔지니어 O팀이 소총을 들고 당신들을 공격합니다!</strong>
+                </p>    
             </div>
             <div id="blue-dragon">
                 <div class="pin"></div>
@@ -60,15 +70,23 @@
                 <div class="dong-name">주작동</div>  
             </div>
         </section>
-            <p>삼번 체력:60 공격력:10 경험치: 0</p>
-            <p>1.공격</p>
-            <p>2.동료의 도움을 받는다.</p>
-            <p>3.아이템 사용</p>
-            <input type="text" id="action" />
-            <button id="actionBtn">입력</button>
-           
+        <section class="player-section">
+            <div class="player-stat">
+                <div id="player-name">삼번</div> 
+                체력:60 멘탈:70 공격력:10 경험치: 0 아이템:
+            </div>    
+            <div>
+                <button id="attackBtn">공격</button>
+                <button id="helpBtn">도움</button>
+                <button id="itemBtn">아이템</button>
+            </div>
+        </section>
+        <section class="player-section">
+            <div class="player-stat">
             <p>쯔OO</p>
-            <p>체력:100 공격력:20 경험치:10 아이템:소총(공격력+30)</p>
+            <p>체력:100 공격력:50 경험치:10 아이템:소총</p>
+            </div>
+        </section>    
         <section class="description">
             <div class="battle-content">
             </div>    
@@ -84,7 +102,12 @@
     </div>
     <script>
         (function(){
-            
+            $menuItem = document.querySelectorAll('.menu-item');
+            $menuItem.forEach(menu => {
+                menu.addEventListener('click', (e) => {
+                    alert(menu.id);
+                });
+            });
         })();
     </script>
 </body>
