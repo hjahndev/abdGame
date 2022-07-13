@@ -244,3 +244,38 @@ section {
     background-color:red;
     border-radius: 30%;
 }
+/* battle.html */
+.player-section {
+    display:block;
+}
+.player-stat {
+    width: 40%; 
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid gray;
+}
+#pre-desc {
+    width: 60%;
+    margin-bottom: 20px;
+}
+#loadingImg {
+    position:absolute;
+    background-image: url('./images/loading2.jpg');
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 43%;
+    opacity: 50%;
+}
+.playBtn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid ivory;
+    background-color: transparent;
+    color: ivory;
+    margin: 15px 0;
+}
+#after-desc {
+    margin: 20px 10px;
+    position: relative;
+}

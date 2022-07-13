@@ -17,6 +17,31 @@
             text-align: center; 
             border: 1px solid gray;
         }
+        #pre-desc {
+            width: 60%;
+            margin-bottom: 20px;
+        }
+        #loadingImg {
+            position:absolute;
+            background-image: url('./images/loading2.jpg');
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            left: 43%;
+            opacity: 50%;
+        }
+        .playBtn {
+            width: 60px;
+            height: 30px;
+            border: 1px solid ivory;
+            background-color: transparent;
+            color: ivory;
+            margin: 15px 0;
+        }
+        #after-desc {
+            margin: 20px 10px;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -57,9 +82,9 @@
                     <option>청룡동 탈출정 확인</option>
                 </select>
                 <button id="selectBtn">선택</button>
-                <p>
-                    <strong style="color:red;">쾅! 엔지니어 O팀이 소총을 들고 당신들을 공격합니다!</strong>
-                </p>    
+                <div id="pre-desc">
+                    쾅! 소리가 들리는 곳을 보니 엔지니어 O팀이 소총을 겨누고 있다.
+                </div>    
             </div>
             <div id="blue-dragon">
                 <div class="pin"></div>
@@ -72,19 +97,22 @@
         </section>
         <section class="player-section">
             <div class="player-stat">
-                <div id="player-name">삼번</div> 
-                체력:60 멘탈:70 공격력:10 경험치: 0 아이템:
+                <div id="enemy-name">쯔OO</div> 
+                <p>체력:100 공격력:50 경험치:10 아이템:소총</p>
             </div>    
-            <div>
-                <button id="attackBtn">공격</button>
-                <button id="helpBtn">도움</button>
-                <button id="itemBtn">아이템</button>
+            <div id="after-desc">
+                <div id="loadingImg"></div>
             </div>
         </section>
         <section class="player-section">
             <div class="player-stat">
-            <p>쯔OO</p>
-            <p>체력:100 공격력:50 경험치:10 아이템:소총</p>
+                <div id="player-name">삼번</div> 
+                체력:60 멘탈:70 공격력:10 경험치: 0 아이템:
+            </div>
+            <div class="selectBtn">
+                <button class="playBtn" id="attackBtn">공격</button>
+                <button class="playBtn" id="helpBtn">도움</button>
+                <button class="playBtn" id="itemBtn">아이템</button>
             </div>
         </section>    
         <section class="description">
