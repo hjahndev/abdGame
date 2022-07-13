@@ -1,0 +1,281 @@
+/* 01.html */
+body {
+    font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
+    -webkit-overflow-scrolling: touch;
+}
+.start-frame { 
+    display: flex;
+    height: 100vh;
+    background: url(../images/letter.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+.start-letter {
+    text-align: center;
+    width: 600px;
+    margin-left: -13vw;
+    margin-top: 10vw;
+}
+.start-letter h2 {
+    margin-bottom: 15px;
+}
+.start-letter h5 {
+    margin-bottom: 35px;
+}
+.start-letter p {
+    line-height: 35px;
+}
+#letter-content {
+    font-weight: 200;
+    margin: 20px 0;
+}
+#npius {
+    display: none;
+    margin-top: 20px;
+}
+#openMail {
+    color: black;
+    text-decoration-line: none;
+    display: block;
+    margin-top: 20px;
+}
+#name-input {
+    background: transparent;
+    border: none;
+    height: 25px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+} 
+input { margin: 20px 0;}
+#sign {
+    background: transparent;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color: black;
+}
+/* 02.html */
+/* .world {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 300vw;
+    perspective: 1000px;
+}
+.stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 300vw;
+    transform-style: preserve-3d;
+}
+.house {
+    width: 100vw;
+    height: 300vw;
+    transform-style: preserve-3d;
+}
+.wall {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 95vw;
+    height: 30vw;
+}
+.wall-back {
+    height: 300vw;
+    transform: translate3d(0, 0, -5vw);
+    background-image: url(./abd.jpg);
+    background-size: cover;
+    padding: 0 100px;
+}
+.wall-left {
+    width: 30vw;
+    height: 300vw;
+    background: url(./abd.jpg);
+    background-size: cover;
+    transform: rotateY(-90deg) translate3d(0px, 0px, 10vw);
+}
+.wall-right {
+    width: 30vw;
+    height: 300vw;
+    background: url(./abd.jpg);
+    background-size: cover;
+    transform: rotateY(-90deg) translate3d(0, 0, -80vw);
+}
+.wall-front-a { background: transparent; transform: translateY(60vw);}
+.wall-front-b { background: transparent; transform: translateY(90vw); }
+.wall-front-c { background: transparent; transform: translateY(150vw); }
+.wall-front-d { background-color: black; transform: rotateX(90deg) translateZ(-285vw); text-align: center; }
+.wall-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vw;
+    color: ivory;
+}
+.wall-title {
+    font-size: 3rem;
+}
+#start-screen, #screen {
+    height: 80vh;
+    width: 600px;
+    color: ivory;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 30px;
+}
+#start-screen div { margin-top: 30px; width: 600px; }
+*/
+/*03.html*/
+.script {
+    width:100vw;
+    height:100vh;
+    padding: 0 30px;
+    background: url(../images/fourFloor.jpg);
+    background-size: cover;
+    color: ivory;
+    line-height: 35px;
+    overflow-x: hidden;
+}
+select, input {
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 15px 0;
+    min-width: 200px;
+}
+.menu {
+    height: 50px;
+    border-bottom: 1px solid ivory;
+    font-size: 0.9rem;
+}
+.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+}
+.menu-item {
+    margin-right: 3em;
+}
+.developer-information {
+    margin-left: auto;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+.button-nav {
+    text-align: right;
+    display:flex; 
+    justify-content:right;
+    height: 50px;
+}
+section {
+    display:flex;
+}
+.battle-content {
+    width: 50%;
+    min-width: 600px;
+}
+.pin {
+    width: 2px;
+    height: 100px;
+    background-color: ivory;
+}
+.dong-name {
+    font-weight: 500;
+    padding-left: 0.5rem;
+    border-top: 2px solid ivory;
+    min-width: 60px;
+}
+#blue-dragon, #black-tortoise {
+    display:flex; 
+    width:30%; 
+    min-width:500px; 
+}
+#red-bird, #white-tiger {
+    display:flex; 
+    width:20%;
+}
+.button-character {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button-character.pmh {
+    background-image: url('../images/pmh.png');
+    background-size: 50px auto;
+}
+.button-character.ygy {
+    background-image: url('../images/ygy.png');
+    background-size: 50px auto;
+}
+.button-character.shr {
+    background-image: url('../images/shr.png');
+    background-size: 50px auto;
+}
+.button-character.sgh {
+    background-image: url('../images/sgh.png');
+    background-size: 50px auto;
+}
+.button-character.pay {
+    background-image: url('../images/pay.png');
+    background-size: 50px auto;
+}
+.hp-bar {
+    width:40px;
+    margin-right:10px;
+    height: 5px;
+    background-color:aqua;
+    border-radius: 30%;
+}
+.hp-bar .hp {
+    width:30%;
+    height: 5px;
+    background-color:red;
+    border-radius: 30%;
+}
+/* battle.html */
+.player-section {
+    display:block;
+}
+.player-stat {
+    width: 40%; 
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid gray;
+}
+#pre-desc {
+    width: 60%;
+    margin-bottom: 20px;
+}
+#loadingImg {
+    position:absolute;
+    background-image: url('./images/loading2.jpg');
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 43%;
+    opacity: 50%;
+}
+.playBtn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid ivory;
+    background-color: transparent;
+    color: ivory;
+    margin: 15px 0;
+}
+#after-desc {
+    margin: 20px 10px;
+    position: relative;
+}

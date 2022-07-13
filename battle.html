@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abd</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .player-section {
+            display:block;
+        }
+        .player-stat {
+            width: 40%; 
+            padding: 10px; 
+            text-align: center; 
+            border: 1px solid gray;
+        }
+        #pre-desc {
+            width: 60%;
+            margin-bottom: 20px;
+        }
+        #loadingImg {
+            position:absolute;
+            background-image: url('./images/loading2.jpg');
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            left: 43%;
+            opacity: 50%;
+        }
+        .playBtn {
+            width: 60px;
+            height: 30px;
+            border: 1px solid ivory;
+            background-color: transparent;
+            color: ivory;
+            margin: 15px 0;
+        }
+        #after-desc {
+            margin: 20px 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="script">
+        <nav class="menu">
+            <nav class="menu-link">
+                <a class="menu-item" id="stat" href="#">스탯 보기</a>
+                <a class="menu-item" id="items" href="#">아이템 보기</a>
+                <a class="menu-item" id="hint" href="#">게임 설명</a>
+                <a class="menu-item developer-information" id="dev" href="#">제작자 정보</a>
+            </nav>
+        </nav>
+        <nav class="button-nav">
+            <div class="hp-bar">
+                <div class="hp pmh"></div>
+                <button class="button-character pmh"></button>
+            </div>
+            <div class="hp-bar">
+                <div class="hp ygy"></div>
+                <button class="button-character ygy"></button>
+            </div>
+            <div class="hp-bar">
+                <div class="hp shr"></div>    
+                <button class="button-character shr"></button>
+            </div>
+            <div class="hp-bar">
+                <div class="hp sgh"></div> 
+                <button class="button-character sgh"></button>
+            </div>
+            <div class="hp-bar">
+                <div class="hp pay"></div>     
+                <button class="button-character pay"></button>
+            </div>    
+        </nav>
+        <section class="description">
+            <div class="battle-content">
+                <select id="selectWhatToDo">
+                    <option>청룡동 탈출정 확인</option>
+                </select>
+                <button id="selectBtn">선택</button>
+                <div id="pre-desc">
+                    쾅! 소리가 들리는 곳을 보니 엔지니어 O팀이 소총을 겨누고 있다.
+                </div>    
+            </div>
+            <div id="blue-dragon">
+                <div class="pin"></div>
+                <div class="dong-name">청룡동</div>
+            </div>
+            <div id="red-bird">
+                <div class="pin"></div>
+                <div class="dong-name">주작동</div>  
+            </div>
+        </section>
+        <section class="player-section">
+            <div class="player-stat">
+                <div id="enemy-name">쯔OO</div> 
+                <p>체력:100 공격력:50 경험치:10 아이템:소총</p>
+            </div>    
+            <div id="after-desc">
+                <div id="loadingImg"></div>
+            </div>
+        </section>
+        <section class="player-section">
+            <div class="player-stat">
+                <div id="player-name">삼번</div> 
+                체력:60 멘탈:70 공격력:10 경험치: 0 아이템:
+            </div>
+            <div class="selectBtn">
+                <button class="playBtn" id="attackBtn">공격</button>
+                <button class="playBtn" id="helpBtn">도움</button>
+                <button class="playBtn" id="itemBtn">아이템</button>
+            </div>
+        </section>    
+        <section class="description">
+            <div class="battle-content">
+            </div>    
+            <div id="black-tortoise">
+                <div class="pin"></div>
+                <div class="dong-name">현무동</div>
+            </div>
+            <div id="white-tiger">
+                <div class="pin"></div>
+                <div class="dong-name">백호동</div>  
+            </div>    
+        </section>
+    </div>
+    <script>
+        (function(){
+            $menuItem = document.querySelectorAll('.menu-item');
+            $menuItem.forEach(menu => {
+                menu.addEventListener('click', (e) => {
+                    alert(menu.id);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
