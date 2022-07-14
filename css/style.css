@@ -253,19 +253,20 @@ section {
     padding: 10px; 
     text-align: center; 
     border: 1px solid gray;
+    max-width: 435px;
 }
 #pre-desc {
-    width: 60%;
+    width: 80%;
     margin-bottom: 20px;
 }
 #loadingImg {
     position:absolute;
-    background-image: url('./images/loading2.jpg');
+    background-image: url('../images/loading.png');
     background-size: contain;
     width: 200px;
     height: 200px;
     left: 43%;
-    opacity: 50%;
+    top: 30%;
 }
 .playBtn {
     width: 60px;
