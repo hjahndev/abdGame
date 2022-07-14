@@ -8,40 +8,6 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        .player-section {
-            display:block;
-        }
-        .player-stat {
-            width: 40%; 
-            padding: 10px; 
-            text-align: center; 
-            border: 1px solid gray;
-        }
-        #pre-desc {
-            width: 60%;
-            margin-bottom: 20px;
-        }
-        #loadingImg {
-            position:absolute;
-            background-image: url('./images/loading2.jpg');
-            background-size: contain;
-            width: 200px;
-            height: 200px;
-            left: 43%;
-            opacity: 50%;
-        }
-        .playBtn {
-            width: 60px;
-            height: 30px;
-            border: 1px solid ivory;
-            background-color: transparent;
-            color: ivory;
-            margin: 15px 0;
-        }
-        #after-desc {
-            margin: 20px 10px;
-            position: relative;
-        }
     </style>
 </head>
 <body>
@@ -76,6 +42,7 @@
                 <button class="button-character pay"></button>
             </div>    
         </nav>
+        <div id="loadingImg"></div>
         <section class="description">
             <div class="battle-content">
                 <select id="selectWhatToDo">
@@ -101,7 +68,6 @@
                 <p>체력:100 공격력:50 경험치:10 아이템:소총</p>
             </div>    
             <div id="after-desc">
-                <div id="loadingImg"></div>
             </div>
         </section>
         <section class="player-section">
