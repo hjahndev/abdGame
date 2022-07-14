@@ -208,7 +208,6 @@ section {
     height: 50px;
     border: 0;
     background-color: transparent;
-    cursor: pointer;
 }
 .button-character.pmh {
     background-image: url('../images/pmh.png');
@@ -242,4 +241,43 @@ section {
     height: 5px;
     background-color:red;
     border-radius: 30%;
+}
+/* battle.html */
+.player-section {
+    display:block;
+}
+.player-stat, .enemy-stat {
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid gray;
+    max-width: 435px;
+}
+#pre-desc {
+    width: 80%;
+    margin-bottom: 20px;
+}
+#loadingImg {
+    position:absolute;
+    background-image: url('../images/loading.png');
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+    left: 35%;
+    top: 25%;
+}
+.playBtn {
+    width: 100%;
+    height: 30px;
+    border: 1px solid ivory;
+    background-color: transparent;
+    color: ivory;
+    cursor: pointer;
+}
+#after-desc {
+    margin: 20px 10px;
+    position: relative;
+}
+.selectBtnDiv {
+    margin-top: 10px;
+    max-width: 435px;
 }
