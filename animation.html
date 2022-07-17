@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abd</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
+            -webkit-overflow-scrolling: touch;  
+            overflow-x: hidden;  
+            /* background:black; */
+        }
+        .world {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 98vw;
+        }
+        .ground {
+            height: 100vh;
+            padding: 10vw;
+            line-height: 35px;
+        }
+        .underground {
+            height: 300vh;
+            padding: 10vw;
+            line-height: 35px;
+            transform: translateY(0px);
+        }
+        .wall {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .ground .wall-back {
+            height: 100vh;
+            background-image: url(./images/beach.jpg);
+            background-size: cover;
+            transform: translate3d(10vw, 0, -0);
+            width: 70vw;
+            padding: 10%;
+        }
+        .ground .wall-left {
+            width: 35vw;
+            height: 105vh;
+            background: url(./images/beach.jpg);
+            background-size: cover;
+            transform: perspective(800px) rotateY(-120deg) translate3d(0, -3%, 0);
+            transform-origin: 25%;
+            z-index:99;
+        }
+        .ground .wall-right {
+            width: 30vw;
+            height: 157vh;
+            background: url(./images/beach.jpg);
+            background-size: cover;
+            transform: perspective(800px) rotateY(120deg) translate3d(0.4vw, -35vw, 90vw);
+            transform-origin: 99%;
+            z-index:99;
+        }
+        .underground .wall-back {
+            height: 300vh;
+            background-image: url(./images/abd.jpg);
+            background-size: cover;
+            transform: translate3d(10vw, 0, -0);
+            width: 70vw;
+            padding: 10%;
+        }
+        .underground .wall-left {
+            width: 30vw;
+            height: 320vh;
+            background: url(./images/abd.jpg);
+            background-size: cover;
+            transform: perspective(800px) rotateY(-120deg) translate3d(0, -3%, 0);
+            transform-origin: 25%;
+        }
+        .underground .wall-right {
+            width: 30vw;
+            height: 320vh;
+            background: url(./images/abd.jpg);
+            background-size: cover;
+            transform: perspective(800px) rotateY(-120deg) translate3d(0, -35vw, 90vw);
+            transform-origin: 99%;
+        }
+        button {
+            background: transparent;
+            border: 2px solid rgb(126, 126, 126);
+            color: rgb(126, 126, 126);
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .wall-front-a { background: transparent; transform: translateY(45vw); left: 35%; }
+        .wall-front-b { background: transparent; transform: translateY(100vw); left: 35%; }
+        .wall-front-c { background: transparent; transform: translateY(140vw); left: 35%; }
+        .wall-front-d { background: transparent; transform: translateY(200vw); left: 35%; }
+        .wall-front-e { background: transparent; transform: translateY(300vw); left: 35%; }
+        .wall-front-f { background-color: black; transform: rotateX(90deg) translateZ(-285vw); text-align: center; }
+        .wall-content { color: ivory; }
+        .wall-front-a .wall-content { color:black; }
+       
+    </style>
+</head>
+<body>
+    <div class="world">
+        <div class="ground">
+            <section class="wall wall-back">         
+                <p>축하합니다! 당신은 해저기지 입사 절차를 모두 마쳤습니다.</p>
+                <p>프리야 쿠마리: "해저기지 인원이 된 걸 환영합니다."</p>
+                <p>당신은 중앙 엘리베이터에 탑승했습니다.</p> 
+                제 4해저기지로 가는 버튼을 누르십시오.
+                <button id="elevatorBtn">B4</button>
+            </section>
+            <section class="wall wall-left"></section>
+            <section class="wall wall-right"></section>
+        </div>
+        <div class="underground">  
+            <section class="wall wall-back">
+            </section>        
+            <section class="wall wall-left"></section>
+            <section class="wall wall-right"></section>
+        </div>
+        
+        <section class="wall wall-front wall-front-a">
+            <div class="wall-content">
+                <h2 class="wall-title">0m. 대한도</h2>
+            </div>
+        </section>
+        <section class="wall wall-front wall-front-b">
+            <div class="wall-content">
+                <h2 class="wall-title">-50m. 제1해저기지</h2>
+            </div>
+        </section>
+        <section class="wall wall-front wall-front-c">
+            <div class="wall-content">
+                <h2 class="wall-title">-200m. 제2해저기지</h2>
+            </div>
+        </section>
+        <section class="wall wall-front wall-front-d">
+            <div class="wall-content">
+                <h2 class="wall-title">-1000m. 제3해저기지</h2>
+            </div>
+        </section>
+        <section class="wall wall-front wall-front-e">
+            <div class="wall-content">
+                <h2 class="wall-title">-3000m. 제4해저기지</h2>
+            </div>
+        </section>
+        <section class="wall wall-front wall-front-f">
+            <div class="wall-content">
+                <h2 class="wall-title">"육지에서 사는 생물들은 언제나 바다를 그리워하지만 그 바닷물에 잠긴 순간 돌아갈 수 없다."</h2>
+            </div>
+        </section>
+    </div>
+    <!--// world -->
+    <script>
+        (function() {
+            const $elevatorBtn = document.querySelector('#elevatorBtn');            
+            $elevatorBtn.addEventListener('click', function(e) {
+                //e.preventDefault(); //form submit 막음
+                const scrollDown = setInterval(()=>{
+                    let pageYOffset = window.pageYOffset;
+                    window.scrollTo(0, pageYOffset + 5);
+        
+                    if(pageYOffset > 2600) {
+                        clearInterval(scrollDown);
+                    }
+                }, 20);
+            });
+        })();
+    </script>
+</body>
+</html>
