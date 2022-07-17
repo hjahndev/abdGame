@@ -3,6 +3,8 @@ import '../css/reset.css';
 import '../css/style.css';
 import Head from 'next/head';
 
+import wrapper from '../store/configureStore';
+
 function MyApp({ Component}) {
     return (
       <>
@@ -16,4 +18,4 @@ function MyApp({ Component}) {
     );
 }
 
-  export default MyApp;
+  export default wrapper.withRedux(MyApp);
