@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Menu } from '/components/Menu';
 import { SelectBtnDiv } from '/components/SelectBtnDiv';
 import { Players } from '/components/Players';
+import 'antd/dist/antd.css';
 
 const selectOptions = [{value: 1, name: "공격한다"}, {value: 2, name: "동료에게 도움을 요청한다"}, {value: 3, name: "후퇴한다"}];
 const player = {att: "5", hp: "50", lev: "1", maxHp: "50", maxMp: "100", mp: "100", 
