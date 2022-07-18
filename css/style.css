@@ -6,7 +6,7 @@ body {
 .start-frame { 
     display: flex;
     height: 100vh;
-    background: url(../images/letter.jpg);
+    background: url(/images/letter.jpg);
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -32,7 +32,6 @@ body {
     margin: 20px 0;
 }
 #npius {
-    display: none;
     margin-top: 20px;
 }
 #openMail {
@@ -58,7 +57,11 @@ input { margin: 20px 0;}
     color: black;
 }
 /* 02.html */
-/* .world {
+body {
+    background: url(/images/beach.jpg);
+    overflow-x: hidden;
+}
+.world {
     position: absolute;
     left: 0;
     top: 0;
@@ -66,18 +69,10 @@ input { margin: 20px 0;}
     height: 300vw;
     perspective: 1000px;
 }
-.stage {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 300vw;
-    transform-style: preserve-3d;
-}
-.house {
-    width: 100vw;
-    height: 300vw;
-    transform-style: preserve-3d;
+#ceiling {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10vw;
 }
 .wall {
     position: absolute;
@@ -85,25 +80,26 @@ input { margin: 20px 0;}
     top: 0;
     width: 95vw;
     height: 30vw;
+    background: rgb(255, 255, 255, 0.8); 
 }
 .wall-back {
     height: 300vw;
-    transform: translate3d(0, 0, -5vw);
-    background-image: url(./abd.jpg);
+    transform: translate3d(0, 0, -15vw);
+    background-image: url(/images/abd.jpg);
     background-size: cover;
     padding: 0 100px;
 }
 .wall-left {
     width: 30vw;
     height: 300vw;
-    background: url(./abd.jpg);
+    background: url(/images/abd.jpg);
     background-size: cover;
     transform: rotateY(-90deg) translate3d(0px, 0px, 10vw);
 }
 .wall-right {
     width: 30vw;
     height: 300vw;
-    background: url(./abd.jpg);
+    background: url(/images/abd.jpg);
     background-size: cover;
     transform: rotateY(-90deg) translate3d(0, 0, -80vw);
 }
@@ -119,7 +115,7 @@ input { margin: 20px 0;}
     color: ivory;
 }
 .wall-title {
-    font-size: 3rem;
+    font-size: 1.3rem;
 }
 #start-screen, #screen {
     height: 80vh;
@@ -130,13 +126,30 @@ input { margin: 20px 0;}
     padding: 30px;
 }
 #start-screen div { margin-top: 30px; width: 600px; }
-*/
-/*03.html*/
-.script {
+#elevatorBtn {
+    background: transparent;
+    border: 2px solid ivory;
+    color: ivory;
+    padding: 10px;
+    border-radius: 45px;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+.wall-front-d .wall-content {
+    display:block;
+    padding-top:10%;
+}
+.wall-front-d .wall-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+/* centerDong.js */
+.centerDong {
     width:100vw;
     height:100vh;
-    padding: 0 30px;
-    background: url(../images/fourFloor.jpg);
+    padding: 30px;
+    background: url(/images/centerDong.jpg);
     background-size: cover;
     color: ivory;
     line-height: 35px;
@@ -149,6 +162,28 @@ select, input {
     margin: 15px 0;
     min-width: 200px;
 }
+/* intro.js */
+#intro {
+    width:100vw;
+    height:100vh;
+    background: black;
+    color: ivory;
+    text-align: center;
+    position: relative;
+}
+#alarm {
+    top: 50%;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+}
+#wake {
+    bottom: 5%;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+}
+/* Menu.jsx */
 .menu {
     height: 50px;
     border-bottom: 1px solid ivory;
@@ -167,7 +202,7 @@ select, input {
 .developer-information {
     margin-left: auto;
 }
-a {
+.menu-link a {
     color: #999;
     text-decoration: none;
 }
@@ -177,8 +212,19 @@ a {
     justify-content:right;
     height: 50px;
 }
-section {
-    display:flex;
+/* battle.js */
+.battle-script {
+    width:100vw;
+    height:100vh;
+    padding: 0 30px;
+    background: url(/images/fourFloor.jpg);
+    background-size: cover;
+    color: ivory;
+    line-height: 35px;
+    overflow-x: hidden;
+}
+.description {
+    display: flex;
 }
 .battle-content {
     width: 50%;
@@ -209,26 +255,25 @@ section {
     height: 50px;
     border: 0;
     background-color: transparent;
-    cursor: pointer;
 }
 .button-character.pmh {
-    background-image: url('../images/pmh.png');
+    background-image: url('/images/pmh.png');
     background-size: 50px auto;
 }
 .button-character.ygy {
-    background-image: url('../images/ygy.png');
+    background-image: url('/images/ygy.png');
     background-size: 50px auto;
 }
 .button-character.shr {
-    background-image: url('../images/shr.png');
+    background-image: url('/images/shr.png');
     background-size: 50px auto;
 }
 .button-character.sgh {
-    background-image: url('../images/sgh.png');
+    background-image: url('/images/sgh.png');
     background-size: 50px auto;
 }
 .button-character.pay {
-    background-image: url('../images/pay.png');
+    background-image: url('/images/pay.png');
     background-size: 50px auto;
 }
 .hp-bar {
@@ -244,38 +289,41 @@ section {
     background-color:red;
     border-radius: 30%;
 }
-/* battle.html */
 .player-section {
     display:block;
 }
-.player-stat {
-    width: 40%; 
+.player-stat, .enemy-stat {
     padding: 10px; 
     text-align: center; 
     border: 1px solid gray;
+    max-width: 435px;
 }
 #pre-desc {
-    width: 60%;
+    width: 80%;
     margin-bottom: 20px;
 }
 #loadingImg {
     position:absolute;
-    background-image: url('./images/loading2.jpg');
+    background-image: url('/images/loading.png');
     background-size: contain;
-    width: 200px;
-    height: 200px;
-    left: 43%;
-    opacity: 50%;
+    width: 400px;
+    height: 400px;
+    left: 35%;
+    top: 25%;
 }
 .playBtn {
-    width: 60px;
+    width: 100%;
     height: 30px;
     border: 1px solid ivory;
     background-color: transparent;
     color: ivory;
-    margin: 15px 0;
+    cursor: pointer;
 }
 #after-desc {
     margin: 20px 10px;
     position: relative;
+}
+.selectBtnDiv {
+    margin-top: 10px;
+    max-width: 435px;
 }
