@@ -2,11 +2,12 @@ import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 
 import { useDispatch } from 'react-redux';
-import { startAction } from '../reducers';
+import { START } from '../reducers';
 
 const Home = () => {
     const [ openMail, setOpenMail ] = useState(false);
     const dispatch = useDispatch();
+    const [ status, setStatus ] = useState('start');
     const [ name, setName ] = useState('');
     const interval = useRef(null);
     const audioRef = useRef();
@@ -40,7 +41,10 @@ const Home = () => {
     }
 
     const onSign = (e) => {
-        dispatch(startAction({name}));
+        dispatch({
+            type: START,
+            data: { status, name}
+        });
         router.push('/elevator');  
     }
 
