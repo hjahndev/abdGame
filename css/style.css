@@ -3,6 +3,7 @@ body {
     font-family: 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
     -webkit-overflow-scrolling: touch;
 }
+a, button { cursor: pointer; }
 .start-frame { 
     display: flex;
     height: 100vh;
@@ -155,12 +156,27 @@ body {
     line-height: 35px;
     overflow-x: hidden;
 }
-select, input {
+.centerDong select,
+.centerDong input {
     padding: 3px;
     border-radius: 5px;
     font-size: 1rem;
     margin: 15px 0;
     min-width: 200px;
+    background-color: transparent;
+    border: 1px solid ivory;
+    color: ivory;
+}
+.centerDong select option {
+    background: #999;
+}
+.centerDong-btn {
+    background-color: transparent;
+    color: ivory;
+    border: none;
+    font-size: 1rem;
+    margin: 15px;
+    padding: 3px;
 }
 /* intro.js */
 #intro {

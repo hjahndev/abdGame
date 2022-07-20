@@ -23,11 +23,15 @@ const Home = () => {
     const typeLetter = () => {
         setLetterTyping(letterArr.slice(0, charCount).join(''));
         charCount++;
-        audioRef.current.play();
+        if(audioRef.current !== null) {
+            audioRef.current.play();
+        }
         if(charCount > letter.length) {
             clearInterval(interval.current);
-            audioRef.current.pause();
-            audioRef.current.currentTimme = 0;
+            if(audioRef.current !== null) {
+                audioRef.current.pause();
+                audioRef.current.currentTimme = 0;
+            }
         }
     }
 
@@ -43,7 +47,7 @@ const Home = () => {
     const onSign = (e) => {
         dispatch({
             type: START,
-            data: { status, name}
+            data: { status, name }
         });
         router.push('/elevator');  
     }

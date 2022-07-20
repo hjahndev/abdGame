@@ -1,9 +1,16 @@
 import React, { useState, useRef } from 'react';
-import Link from 'next/link';
-                
+import { useRouter } from 'next/router';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { CENTER_DONG } from '../reducers';
+
 const Elevator = () => {
     const scrollDown = useRef();
-
+    const dispatch = useDispatch();
+    const router = useRouter();
+    const state = useSelector((state) => state);
+    const [ status, setStatus ] = useState('start');
+    
     const onClickElevatorBtn = (e) => {
         e.preventDefault(); //form submit 막음    
         let pageYOffset = 0;
@@ -18,6 +25,14 @@ const Elevator = () => {
                 clearInterval(scrollDown.current);
             }
         }, 20);
+    }
+
+    const onClickOpenElev = (e) => {
+        dispatch({
+            type: CENTER_DONG,
+            data: { status: status, gameToken: state.index.gameToken }
+        });
+        router.push('/centerDong');  
     }
 
     return (
@@ -55,7 +70,7 @@ const Elevator = () => {
         </section>
         <section className="wall wall-front wall-front-d">
             <div className="wall-content">-3000m. 제4해저기지에 도착했습니다.
-                <div><Link href="/centerDong"><a>"육지에서 사는 생물들은 언제나 바다를 그리워하지만 그 바닷물에 잠긴 순간 돌아갈 수 없다."</a></Link></div>
+                <div><a onClick={onClickOpenElev}>"육지에서 사는 생물들은 언제나 바다를 그리워하지만 그 바닷물에 잠긴 순간 돌아갈 수 없다."</a></div>
             </div>
         </section>
     </div>
