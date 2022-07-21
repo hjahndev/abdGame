@@ -13,7 +13,7 @@ const Battle = () => {
     return (
     <div className="battle-script">
         <Menu />
-        <div id="loadingImg"></div>
+        
         <section className="description">
             <div className="battle-content">
                 <select id="selectWhatToDo">
