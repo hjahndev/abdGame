@@ -1,17 +1,17 @@
 import axios from 'axios';
-import { all, fork, call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { all, fork, call, put, takeEvery, take } from 'redux-saga/effects';
 import { keyframes } from 'styled-components';
 
 function startAPI(data) {
-    return axios.post(`http://52.89.23.86:8080/abd/gameSetup`, data);
+    return axios.post(`http://localhost:8080/abd/gameSetup`, data);
 }
 
 function centerDongAPI(data) {
-    return axios.post(`http://52.89.23.86:8080/abd/gamePlay`, data);
+    return axios.post(`http://localhost:8080/abd/gamePlay`, data);
 }
 
 function jobAPI(data) {
-    return axios.post(`http://52.89.23.86:8080/abd/gamePlay`, data);
+    return axios.post(`http://localhost:8080/abd/gamePlay`, data);
 }
 
 function* watchStart(action) {

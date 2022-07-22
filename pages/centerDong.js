@@ -1,17 +1,20 @@
 import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { Stat } from '/components/Stat';
+import { Scripts } from '/components/Scripts';
 import { useDispatch, useSelector } from 'react-redux';
 import { JOB, PLAY, SELECT } from '../reducers';
 
 const CenterDong = () => {
     const [ job, setJob ] = useState('');
-    const [ selected, setSelected ] = useState(1);
     const inputRef = useRef(null);
+    const [ selected, setSelected ] = useState(1);
     const dispatch = useDispatch();
     const state = useSelector((state) => state);
     const select = state.index.select;
+    const sceneStatus = state.index.sceneStatus;
     const [ status, setStatus ] = useState('onGoing');
+    const router = useRouter();
 
     const onChangeInput = (e) => {
         setJob(e.target.value);
@@ -27,6 +30,9 @@ const CenterDong = () => {
             type: PLAY,
             data: { status: status, action: 'event', gameToken: state.index.gameToken }
         });
+        if(state.index.day === 6 && sceneStatus === 'end') {
+            router.push('/intro');  
+        }
     }
     const handleChangeSelect = (e) => {
         setSelected(e.target.value);
@@ -41,35 +47,38 @@ const CenterDong = () => {
 
     return (
             <div className="centerDong">
-                <div id="resultTxt">
-                    {state.index.resultTxt !== undefined ?
-                    <div>
-                        {state.index.resultTxt}
-                        <button className="centerDong-btn" onClick={onClickPlayBtn}>다음</button>
-                        <Stat />
-                    </div>
-                    :state.index.play !== 'select'?
-                        <>    
-                            <p>엘리베이터 문이 열렸습니다. 제 4해저기지 내부가 보입니다.</p>
-                            <p>당신은 백호동 숙소에 강수정씨가 가져다 둔 짐을 풀고 휴식을 취했습니다.</p>
-                            <p>당신은 오늘 휴가를 보냅니다. 특수직인 당신의 직업은 무엇입니까?</p>
-                            <input type="text" id="inputJob" ref={inputRef} value={job} onChange={onChangeInput}/>
-                            <button className="centerDong-btn" onClick={onClickJobBtn}>입력</button>
+                <Scripts />
+                    {state.index.day === 1 && state.index.play === 'input'?
+                        <>
+                        <input type="text" ref={inputRef} value={job} onChange={onChangeInput}/>
+                        <button className="centerDong-btn" onClick={onClickJobBtn}>입력</button> 
                         </>
-                        :<>
+                    :null     
+                    }
+                    {sceneStatus === 'end'?
+                        <button className="centerDong-btn" onClick={onClickPlayBtn}>다음</button>    
+                    :null
+                    }
+                    {state.index.play === 'select'?
+                        <div>
                             <p>{select.selectHead}</p>
                             <select onChange={handleChangeSelect} value={selected}>
                                 {select.selectOptions.map((v)=>{
                                     return <option key={v.value} value={v.value}>{v.name}</option>
                                 })}
                             </select>
-                            <button className="centerDong-btn" onClick={onClickSelectBtn}>선택</button>
-                            <Stat />
-                        </> 
+                            <button className="centerDong-btn" onClick={onClickSelectBtn}>선택</button> 
+                        </div>
+                    :null   
                     }
-                    
-                </div>
+                    {state.index.player !== undefined?
+                        <Stat />
+                    :null
+                    }
             </div>
+                            
+                            
+                            
     );
 }
 

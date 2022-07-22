@@ -9,5 +9,6 @@ export const Stat = () => {
                 <div id="player-name">{player.name}</div> 
                 체력:{player.hp}/{player.maxHp} 정신력:{player.mp}/{player.maxMp} 공격력:{player.att} 경험치: {player.xp}
             </div>
+        
     );
 }

@@ -15,11 +15,14 @@ const initialState = {
     name: '',
     player: null,
     job: '',
-    resultTxt: '',
-    script: '',
+    scripts: null,
+    input: null,
     play: '',
     select: null,
     selectCode: '',
+    day: 0,
+    sceneStatus: '',
+    sceneInfo: '',
 
 };
 
@@ -44,12 +47,17 @@ const rootReducer = combineReducers({
                 return {
                     ...state,
                     status: action.data.status,
-                    gameToken: action.data.gameToken
+                    gameToken: action.data.gameToken,
+                    scripts: ['']
                 }         
             case 'CENTER_DONG_SUCCESS':
                 return {
                     ...state,
                     status: action.data.status,
+                    scripts: action.data.scripts,
+                    input: action.data.input,
+                    play: action.data.play,
+                    day: action.data.day
                 }     
             case 'JOB': 
                 return {
@@ -59,9 +67,10 @@ const rootReducer = combineReducers({
             case 'JOB_SUCCESS': 
                 return {
                     ...state,
-                    resultTxt: action.data.input.resultTxt,
+                    scripts: action.data.scripts,
                     player: action.data.player,
-                    play: action.data.play
+                    play: '',
+                    sceneStatus: action.data.sceneStatus
                 } 
             case 'PLAY': 
                 return {
@@ -70,11 +79,14 @@ const rootReducer = combineReducers({
             case 'PLAY_SUCCESS': 
                 return {
                     ...state,
-                    resultTxt: action.data.script,
+                    scripts: action.data.scripts,
                     player: action.data.player,
                     play: action.data.play,
                     select: action.data.select,
-                    selectCode: action.data.selectCode
+                    selectCode: action.data.selectCode,
+                    sceneStatus: action.data.sceneStatus,
+                    day: action.data.day,
+                    sceneInfo: action.data.sceneInfo
                 }
             case 'SELECT':
                 return {
@@ -83,11 +95,12 @@ const rootReducer = combineReducers({
             case 'SELECT_SUCCESS':
                 return {
                     ...state,
-                    resultTxt: action.data.script,
+                    scripts: action.data.scripts,
                     player: action.data.player,
                     play: action.data.play,
                     select: action.data.select,
-                    selectCode: action.data.selectCode
+                    selectCode: action.data.selectCode,
+                    sceneStatus: action.data.sceneStatus,
                 }                                         
             default:
                 return state;    
