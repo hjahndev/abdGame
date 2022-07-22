@@ -10,9 +10,11 @@ export const Scripts = () => {
         <div className="script">
             { day > 1? `${(day - 1)}일차.`
             :null}
-            {scripts.map((v, i)=>{
-                return <p key={i}>{v}</p>
-            })}
+            {scripts !== undefined?
+                scripts.map((v, i)=>{
+                    return <p key={i}>{v}</p>
+                })
+            :null}
         </div>
     );
 }
