@@ -1,11 +1,11 @@
 {
   "/_app": "pages/_app.js",
-  "/battle": "pages/battle.html",
-  "/centerDong": "pages/centerDong.html",
-  "/elevator": "pages/elevator.html",
   "/_error": "pages/_error.js",
+  "/battle": "pages/battle.html",
+  "/elevator": "pages/elevator.html",
+  "/centerDong": "pages/centerDong.html",
+  "/": "pages/index.html",
   "/intro": "pages/intro.html",
   "/_document": "pages/_document.js",
-  "/": "pages/index.html",
   "/404": "pages/404.html"
 }
