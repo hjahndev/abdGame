@@ -48,33 +48,33 @@ const CenterDong = () => {
     return (
             <div className="centerDong">
                 <Scripts />
-                    {state.index.day === 1 && state.index.play === 'input'?
-                        <>
-                        <input type="text" ref={inputRef} value={job} onChange={onChangeInput}/>
-                        <button className="centerDong-btn" onClick={onClickJobBtn}>입력</button> 
-                        </>
-                    :null     
-                    }
-                    {sceneStatus === 'end'?
-                        <button className="centerDong-btn" onClick={onClickPlayBtn}>다음</button>    
-                    :null
-                    }
-                    {state.index.play === 'select'?
-                        <div>
-                            <p>{select.selectHead}</p>
-                            <select onChange={handleChangeSelect} value={selected}>
-                                {select.selectOptions.map((v)=>{
-                                    return <option key={v.value} value={v.value}>{v.name}</option>
-                                })}
-                            </select>
-                            <button className="centerDong-btn" onClick={onClickSelectBtn}>선택</button> 
-                        </div>
-                    :null   
-                    }
-                    {state.index.player !== undefined?
-                        <Stat />
-                    :null
-                    }
+                {state.index.day === 1 && state.index.play === 'input'?
+                    <>
+                    <input type="text" ref={inputRef} value={job} onChange={onChangeInput}/>
+                    <button className="centerDong-btn" onClick={onClickJobBtn}>입력</button> 
+                    </>
+                :null     
+                }
+                {sceneStatus === 'end'?
+                    <button className="centerDong-btn" onClick={onClickPlayBtn}>다음</button>    
+                :null
+                }
+                {state.index.play === 'select'?
+                    <div>
+                        <p>{select.selectHead}</p>
+                        <select onChange={handleChangeSelect} value={selected}>
+                            {select.selectOptions.map((v)=>{
+                                return <option key={v.value} value={v.value}>{v.name}</option>
+                            })}
+                        </select>
+                        <button className="centerDong-btn" onClick={onClickSelectBtn}>선택</button> 
+                    </div>
+                :null   
+                }
+                {state.index.player !== undefined?
+                    <Stat />
+                :null
+                }
             </div>
                             
                             

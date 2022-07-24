@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { MEMBER_STAT, MEMBER_STAT_VISIBLE } from '../reducers/memberStat';
 import { Modal } from 'antd';
+import MemberStat from './MemberStat';
 
 export const Menu = () => {
-    const [isStatsModalVisible, setIsStatsModalVisible ] = useState(false);
+    const state = useSelector((state) => state);
+    const dispatch = useDispatch();
     const [isItemsModalVisible, setIsItemsModalVisible ] = useState(false);
     const [isRuleModalVisible, setIsRuleModalVisible ] = useState(false);
     const [isMakerModalVisible, setIsMakerModalVisible ] = useState(false);
+
     const showStatsModal = () => {
-        setIsStatsModalVisible(true);
+        dispatch({
+            type: MEMBER_STAT,
+            data: { gameToken: state.index.gameToken}
+        });
+        dispatch({
+            type: MEMBER_STAT_VISIBLE,
+            data: { isStatsModalVisible: true}
+        }); 
     }
-    const hideStatsModal = () => {
-        setIsStatsModalVisible(false);
-    }
+    
     const showItemsModal = () => {
         setIsItemsModalVisible(true);
     }
@@ -62,27 +72,9 @@ export const Menu = () => {
                     <button className="button-character pay"></button>
                 </div>    
             </nav>
-            <Modal title="스탯보기" style={{color:'ivory'}} bodyStyle={{backgroundColor:'slategrey'}}
-            visible={isStatsModalVisible} onCancel={hideStatsModal} footer={null}>
-                <div className="character-stat">
-                    <img src="/images/pmh.png" style={{width:'100px', height:'100px'}}/>
-                </div>
-                <div className="character-stat">
-                    <img src="/images/ygy.png" style={{width:'100px', height:'100px'}}/>
-                </div>
-                <div className="character-stat">
-                    <img src="/images/shr.png" style={{width:'100px', height:'100px'}}/>
-                </div>
-                <div className="character-stat">
-                    <img src="/images/sgh.png" style={{width:'100px', height:'100px'}}/>
-                </div>
-                <div className="character-stat">
-                    <img src="/images/pay.png" style={{width:'100px', height:'100px'}}/>
-                </div>
-            </Modal>
+            <MemberStat />
             <Modal title="아이템 보기" style={{color:'ivory'}} bodyStyle={{backgroundColor:'black'}}
             visible={isItemsModalVisible} onCancel={hideItemsModal} footer={null}>
-
             </Modal>
             <Modal title="게임 설명" style={{color:'ivory'}} bodyStyle={{backgroundColor:'black'}}
             visible={isRuleModalVisible} onCancel={hideRuleModal} footer={null}>

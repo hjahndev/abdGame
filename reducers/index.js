@@ -1,5 +1,6 @@
 import { HYDRATE } from 'next-redux-wrapper';
 import battle from './battle';
+import memberStat from './memberStat'
 import { combineReducers } from 'redux';
 
 export const START = 'START';
@@ -22,8 +23,7 @@ const initialState = {
     selectCode: '',
     day: 0,
     sceneStatus: '',
-    sceneInfo: '',
-
+    sceneInfo: ''
 };
 
 const rootReducer = combineReducers({
@@ -106,6 +106,7 @@ const rootReducer = combineReducers({
                 return state;    
         }
     },
+    memberStat,
     battle
 });
 
