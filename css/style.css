@@ -343,3 +343,28 @@ body {
     margin-top: 10px;
     max-width: 435px;
 }
+/* MemberStat.js */
+.character-stat {
+    display: flex;
+}
+.stat-view {
+    width: 100%;
+    margin-left: 15px;
+}
+.character-stat .stat-view div {
+    display: flex;
+    align-items: center;
+}
+.character-stat .stat-view .hp-bar {
+    width:150px;
+    margin-left:40px;
+    height: 9px;
+    background-color:aqua;
+    border-radius: 30%;
+}
+.character-stat .stat-view .hp-bar .hp {
+    width:30%;
+    height: 5px;
+    background-color:red;
+    border-radius: 30%;
+}

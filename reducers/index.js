@@ -18,6 +18,7 @@ const initialState = {
     job: '',
     scripts: null,
     input: null,
+    inputVisible: false,
     play: '',
     select: null,
     selectCode: '',
@@ -86,13 +87,18 @@ const rootReducer = combineReducers({
                     selectCode: action.data.selectCode,
                     sceneStatus: action.data.sceneStatus,
                     day: action.data.day,
-                    sceneInfo: action.data.sceneInfo
+                    sceneInfo: action.data.sceneInfo,
+                    inputVisible: false,
                 }
             case 'SELECT':
                 return {
                     ...state
                 } 
             case 'SELECT_SUCCESS':
+                let isInputVisible = true;
+                if(action.data.sceneStatus === 'end'){
+                    isInputVisible = false
+                }
                 return {
                     ...state,
                     scripts: action.data.scripts,
@@ -101,6 +107,7 @@ const rootReducer = combineReducers({
                     select: action.data.select,
                     selectCode: action.data.selectCode,
                     sceneStatus: action.data.sceneStatus,
+                    inputVisible: isInputVisible,
                 }                                         
             default:
                 return state;    

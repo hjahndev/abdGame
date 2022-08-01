@@ -7,7 +7,9 @@ import { JOB, PLAY, SELECT } from '../reducers';
 
 const CenterDong = () => {
     const [ job, setJob ] = useState('');
+    const [ playerInput, setPlayerInput ] = useState('');
     const inputRef = useRef(null);
+    const playerInputRef = useRef(null);
     const [ selected, setSelected ] = useState(1);
     const dispatch = useDispatch();
     const state = useSelector((state) => state);
@@ -24,6 +26,16 @@ const CenterDong = () => {
             type: JOB,
             data: { status: status, action: 'event', inputData: {userInput: job}, gameToken: state.index.gameToken }
         });
+    }
+    const onChangePlayerInput = (e) => {
+        setPlayerInput(e.target.value);
+    }
+    const onClickPlayerInputBtn = (e) => {
+        dispatch({
+            type: PLAY,
+            data: { status: status, action: 'event', inputData: {userInput: playerInput}, gameToken: state.index.gameToken }
+        });
+        setPlayerInput('');
     }
     const onClickPlayBtn = (e) => {
         dispatch({
@@ -52,6 +64,13 @@ const CenterDong = () => {
                     <>
                     <input type="text" ref={inputRef} value={job} onChange={onChangeInput}/>
                     <button className="centerDong-btn" onClick={onClickJobBtn}>입력</button> 
+                    </>
+                :null     
+                }
+                {state.index.inputVisible?
+                    <>
+                    <input type="text" ref={playerInputRef} value={playerInput} onChange={onChangePlayerInput} placeholder='안녕하세요? 새로온 개발자 삼번입니다.'/>
+                    <button className="centerDong-btn" onClick={onClickPlayerInputBtn}>입력</button> 
                     </>
                 :null     
                 }

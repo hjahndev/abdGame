@@ -3,7 +3,11 @@ export const MEMBER_STAT_VISIBLE = 'MEMBER_STAT_VISIBLE';
 
 export const initialState = {
     isStatsModalVisible: false,
-    charaterStatus: null,
+    pmh: null,
+    sgh: null,
+    shr: null,
+    ygy: null,
+    pay: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -15,7 +19,11 @@ const reducer = (state = initialState, action) => {
         case 'MEMBER_STAT_SUCCESS': 
             return {
                 ...state,
-                charaterStatus: action.data.charaterStatus,
+                pmh: action.data.charaterStatus['박무현'],
+                sgh: action.data.charaterStatus['서지혁'],
+                shr: action.data.charaterStatus['신해량'],
+                ygy: action.data.charaterStatus['유금이'],
+                pay: action.data.charaterStatus['백애영']
             }    
         case 'MEMBER_STAT_VISIBLE':
             return {
