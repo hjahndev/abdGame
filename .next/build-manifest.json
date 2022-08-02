@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/VdQ_cafWLabsAf_KO1PCp/_buildManifest.js",
-    "static/VdQ_cafWLabsAf_KO1PCp/_ssgManifest.js"
+    "static/e-hWz8GG2nVwKHfurzVng/_buildManifest.js",
+    "static/e-hWz8GG2nVwKHfurzVng/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -35,7 +35,7 @@
       "static/chunks/main-5ae059702bc551aa.js",
       "static/css/6adc6599c3f423dd.css",
       "static/chunks/107-e60ec90f24716661.js",
-      "static/chunks/pages/battle-10ebcf82189a13d5.js"
+      "static/chunks/pages/battle-b59039db6185faeb.js"
     ],
     "/centerDong": [
       "static/chunks/webpack-b8ce4342256aa460.js",

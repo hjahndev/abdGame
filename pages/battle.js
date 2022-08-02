@@ -7,7 +7,7 @@ import 'antd/dist/antd.css';
 
 const Battle = () => {
     const battleData = useSelector((state) => state.battle);
-    const selectOptions = battleData.select.selectOptions;
+    const selectData = battleData.select;
     const scripts = battleData.scripts;
     
     return (
@@ -16,7 +16,7 @@ const Battle = () => {
         <section className="description">
             <div className="battle-content">
                 <div id="pre-desc">
-                    {scripts !== undefined?
+                    {scripts !== null?
                         scripts.map((v, i)=>{
                             return <p key={i}>{v}</p>
                         })
@@ -37,10 +37,10 @@ const Battle = () => {
         </section>    
         <section className="description">
             <div className="battle-content">
-                {battleData.select.selectHead}
-                {selectOptions.map((v,i)=>{
-                    return (<SelectBtnDiv key={v.value} selectInfo={v}/>);
-                })}
+                {selectData !== null ?
+                selectData.selectHead
+                :null}
+                <SelectBtnDiv />
             </div>    
             <div id="black-tortoise">
                 <div className="pin"></div>
