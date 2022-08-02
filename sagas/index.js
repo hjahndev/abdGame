@@ -102,6 +102,21 @@ function* watchMemberStat(action) {
         })
     }
 }
+function* watchLocation(action) {
+    console.log(action);
+    try {
+        const result = yield call(jobAPI, action.data);
+        yield put({
+            type: 'LOCATION_SUCCESS',
+            data: result.data
+        })
+    } catch (err) {
+        yield put({
+            type: 'LOCATION_FAILURE',
+            data: err.response.data,
+        })
+    }
+}
 function* watchBattle(action) {
     console.log(action);
     try {
@@ -125,6 +140,7 @@ export default function* rootSaga() {
         takeLatest('PLAY', watchPlay),
         takeLatest('SELECT', watchSelect),
         takeLatest('MEMBER_STAT', watchMemberStat),
+        takeLatest('LOCATION', watchLocation),
         takeLatest('BATTLE', watchBattle),
     ]);
 }

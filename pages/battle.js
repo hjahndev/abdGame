@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Menu } from '/components/Menu';
 import { SelectBtnDiv } from '/components/SelectBtnDiv';
-import { Players } from '/components/Players';
+import { Player } from '/components/Player';
 import { useSelector } from 'react-redux';
 import 'antd/dist/antd.css';
 
@@ -9,6 +9,7 @@ const Battle = () => {
     const battleData = useSelector((state) => state.battle);
     const selectOptions = battleData.select.selectOptions;
     const scripts = battleData.scripts;
+    
     return (
     <div className="battle-script">
         <Menu />  
@@ -32,11 +33,11 @@ const Battle = () => {
             </div>
         </section>
         <section className="player-section">
-            <Players />
+            <Player />
         </section>    
         <section className="description">
-            {battleData.selectHead}
             <div className="battle-content">
+                {battleData.select.selectHead}
                 {selectOptions.map((v,i)=>{
                     return (<SelectBtnDiv key={v.value} selectInfo={v}/>);
                 })}

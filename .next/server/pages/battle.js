@@ -1,108 +1,850 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/battle";
-exports.ids = ["pages/battle"];
+exports.id = 973;
+exports.ids = [973];
 exports.modules = {
 
-/***/ "./components/MemberStat.js":
-/*!**********************************!*\
-  !*** ./components/MemberStat.js ***!
-  \**********************************/
+/***/ 479:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ \"antd\");\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _reducers_memberStat__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/memberStat */ \"./reducers/memberStat.js\");\n\n\n\n\n\nconst MemberStat = ()=>{\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();\n    const isStatsModalVisible = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)((state)=>state.memberStat.isStatsModalVisible);\n    const memberStat = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)((state)=>state.memberStat);\n    const pmh = memberStat.pmh;\n    const ygy = memberStat.ygy;\n    const shr = memberStat.shr;\n    const sgh = memberStat.sgh;\n    const pay = memberStat.pay;\n    const hideStatsModal = ()=>{\n        dispatch({\n            type: _reducers_memberStat__WEBPACK_IMPORTED_MODULE_4__.MEMBER_STAT_VISIBLE,\n            data: {\n                isStatsModalVisible: false\n            }\n        });\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_3__.Modal, {\n        title: \"\\uC2A4\\uD0EF\\uBCF4\\uAE30\",\n        style: {\n            color: \"ivory\"\n        },\n        bodyStyle: {\n            backgroundColor: \"slategrey\"\n        },\n        visible: isStatsModalVisible,\n        onCancel: hideStatsModal,\n        footer: null,\n        children: pmh !== null ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"character-stat\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                            src: \"/images/pmh.png\",\n                            style: {\n                                width: \"100px\",\n                                height: \"100px\"\n                            }\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 27,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"stat-view\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        pmh.name,\n                                        \" (\",\n                                        pmh.active,\n                                        \")\"\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 29,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uCCB4\\uB825: \",\n                                        pmh.hp,\n                                        \" / \",\n                                        pmh.maxHp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"hp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"hp pmh\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 30,\n                                                columnNumber: 81\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 30,\n                                            columnNumber: 57\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 30,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uC815\\uC2E0\\uB825: \",\n                                        pmh.mp,\n                                        \" / \",\n                                        pmh.maxMp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"mp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"mp pmh\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 31,\n                                                columnNumber: 82\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 31,\n                                            columnNumber: 58\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 31,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uACF5\\uACA9\\uB825: \",\n                                        pmh.att\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 32,\n                                    columnNumber: 25\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 28,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                    lineNumber: 26,\n                    columnNumber: 17\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"character-stat\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                            src: \"/images/ygy.png\",\n                            style: {\n                                width: \"100px\",\n                                height: \"100px\"\n                            }\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 36,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"stat-view\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        ygy.name,\n                                        \" (\",\n                                        ygy.active,\n                                        \")\"\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 38,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uCCB4\\uB825: \",\n                                        ygy.hp,\n                                        \" / \",\n                                        ygy.maxHp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"hp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"hp ygy\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 39,\n                                                columnNumber: 81\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 39,\n                                            columnNumber: 57\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 39,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uC815\\uC2E0\\uB825: \",\n                                        ygy.mp,\n                                        \" / \",\n                                        ygy.maxMp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"mp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"mp ygy\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 40,\n                                                columnNumber: 82\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 40,\n                                            columnNumber: 58\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 40,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uACF5\\uACA9\\uB825: \",\n                                        ygy.att\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 41,\n                                    columnNumber: 25\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 37,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                    lineNumber: 35,\n                    columnNumber: 17\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"character-stat\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                            src: \"/images/shr.png\",\n                            style: {\n                                width: \"100px\",\n                                height: \"100px\"\n                            }\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 45,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"stat-view\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        shr.name,\n                                        \" (\",\n                                        shr.active,\n                                        \")\"\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 47,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uCCB4\\uB825: \",\n                                        shr.hp,\n                                        \" / \",\n                                        shr.maxHp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"hp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"hp shr\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 48,\n                                                columnNumber: 81\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 48,\n                                            columnNumber: 57\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 48,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uC815\\uC2E0\\uB825: \",\n                                        shr.mp,\n                                        \" / \",\n                                        shr.maxMp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"mp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"mp shr\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 49,\n                                                columnNumber: 82\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 49,\n                                            columnNumber: 58\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 49,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uACF5\\uACA9\\uB825: \",\n                                        shr.att\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 50,\n                                    columnNumber: 25\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 46,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                    lineNumber: 44,\n                    columnNumber: 17\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"character-stat\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                            src: \"/images/sgh.png\",\n                            style: {\n                                width: \"100px\",\n                                height: \"100px\"\n                            }\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 54,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"stat-view\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        sgh.name,\n                                        \" (\",\n                                        sgh.active,\n                                        \")\"\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 56,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uCCB4\\uB825: \",\n                                        sgh.hp,\n                                        \" / \",\n                                        sgh.maxHp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"hp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"hp sgh\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 57,\n                                                columnNumber: 81\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 57,\n                                            columnNumber: 57\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 57,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uC815\\uC2E0\\uB825: \",\n                                        sgh.mp,\n                                        \" / \",\n                                        sgh.maxMp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"mp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"mp sgh\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 58,\n                                                columnNumber: 82\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 58,\n                                            columnNumber: 58\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 58,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uACF5\\uACA9\\uB825: \",\n                                        sgh.att\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 59,\n                                    columnNumber: 25\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 55,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                    lineNumber: 53,\n                    columnNumber: 17\n                }, undefined),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"character-stat\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                            src: \"/images/pay.png\",\n                            style: {\n                                width: \"100px\",\n                                height: \"100px\"\n                            }\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 63,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"stat-view\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        pay.name,\n                                        \" (\",\n                                        pay.active,\n                                        \")\"\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 65,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uCCB4\\uB825: \",\n                                        pay.hp,\n                                        \" / \",\n                                        pay.maxHp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"hp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"hp pay\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 66,\n                                                columnNumber: 81\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 66,\n                                            columnNumber: 57\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 66,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uC815\\uC2E0\\uB825: \",\n                                        pay.mp,\n                                        \" / \",\n                                        pay.maxMp,\n                                        \" \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"mp-bar\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"mp pay\"\n                                            }, void 0, false, {\n                                                fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                                lineNumber: 67,\n                                                columnNumber: 82\n                                            }, undefined)\n                                        }, void 0, false, {\n                                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                            lineNumber: 67,\n                                            columnNumber: 58\n                                        }, undefined)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 67,\n                                    columnNumber: 25\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        \"\\uACF5\\uACA9\\uB825: \",\n                                        pay.att\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                                    lineNumber: 68,\n                                    columnNumber: 25\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                            lineNumber: 64,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n                    lineNumber: 62,\n                    columnNumber: 17\n                }, undefined)\n            ]\n        }, void 0, true) : null\n    }, void 0, false, {\n        fileName: \"/home/jin/front/abdGame/components/MemberStat.js\",\n        lineNumber: 22,\n        columnNumber: 9\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MemberStat);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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Q3BDLDhEQUFDUCxLQUFHOzt3Q0FBQyxnQkFBSTt3Q0FBS1osR0FBRyxDQUFDb0IsRUFBRTt3Q0FBQyxLQUFHO3dDQUFDcEIsR0FBRyxDQUFDcUIsS0FBSzt3Q0FBQyxHQUFDO3NEQUFBLDhEQUFDVCxLQUFHOzRDQUFDQyxTQUFTLEVBQUMsUUFBUTtzREFBQyw0RUFBQ0QsS0FBRztnREFBQ0MsU0FBUyxFQUFDLFFBQVE7Ozs7O3lEQUFPOzs7OztxREFBTTs7Ozs7OzZDQUFNOzhDQUNsRyw4REFBSEQsS0FBRzs7d0NBQUMsc0JBQUs7d0NBQU9aLEdBQUcsQ0FBQ3NCLEVBQUU7d0NBQUMsS0FBRzt3Q0FBQ3RCLEdBQUcsQ0FBQ3VCLEtBQUs7d0NBQUMsR0FBQztzREFBQSw4REFBQ1gsS0FBRzs0Q0FBQ0MsU0FBUyxFQUFDLFFBQVE7c0RBQUMsNEVBQUNELEtBQUc7Z0RBQUNDLFNBQVMsRUFBQyxRQUFROzs7Ozt5REFBTzs7Ozs7cURBQU07Ozs7Ozs2Q0FBTTs4Q0FDbkcsOERBQUxELEtBQUc7O3dDQUFDLHNCQUFLO3dDQUFDWixHQUFHLENBQUN3QixHQUFHOzs7Ozs7NkNBQU87Ozs7OztxQ0FDdkI7Ozs7Ozs2QkFDSjs7d0JBQ1AsR0FDRixJQUFJOzs7OztpQkFDRCxDQUNWO0NBQ0w7QUFFRCxpRUFBZWpDLFVBQVUsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2FiZGdhbWUvLi9jb21wb25lbnRzL01lbWJlclN0YXQuanM/Zjk2MyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyB1c2VEaXNwYXRjaCwgdXNlU2VsZWN0b3IgfSBmcm9tICdyZWFjdC1yZWR1eCc7XG5pbXBvcnQgeyBNb2RhbCB9IGZyb20gJ2FudGQnO1xuaW1wb3J0IHsgTUVNQkVSX1NUQVRfVklTSUJMRSB9IGZyb20gJy4uL3JlZHVjZXJzL21lbWJlclN0YXQnO1xuXG5jb25zdCBNZW1iZXJTdGF0ID0gKCkgPT4ge1xuICAgIGNvbnN0IGRpc3BhdGNoID0gdXNlRGlzcGF0Y2goKTtcbiAgICBjb25zdCBpc1N0YXRzTW9kYWxWaXNpYmxlID0gdXNlU2VsZWN0b3IoKHN0YXRlKSA9PiBzdGF0ZS5tZW1iZXJTdGF0LmlzU3RhdHNNb2RhbFZpc2libGUpO1xuICAgIGNvbnN0IG1lbWJlclN0YXQgPSB1c2VTZWxlY3Rvcigoc3RhdGUpID0+IHN0YXRlLm1lbWJlclN0YXQpO1xuICAgIGNvbnN0IHBtaCA9IG1lbWJlclN0YXQucG1oO1xuICAgIGNvbnN0IHlneSA9IG1lbWJlclN0YXQueWd5O1xuICAgIGNvbnN0IHNociA9IG1lbWJlclN0YXQuc2hyO1xuICAgIGNvbnN0IHNnaCA9IG1lbWJlclN0YXQuc2doO1xuICAgIGNvbnN0IHBheSA9IG1lbWJlclN0YXQucGF5O1xuICAgIGNvbnN0IGhpZGVTdGF0c01vZGFsID0gKCkgPT4ge1xuICAgICAgICBkaXNwYXRjaCh7XG4gICAgICAgICAgICB0eXBlOiBNRU1CRVJfU1RBVF9WSVNJQkxFLFxuICAgICAgICAgICAgZGF0YTogeyBpc1N0YXRzTW9kYWxWaXNpYmxlOiBmYWxzZX1cbiAgICAgICAgfSk7IFxuICAgIH1cbiAgICByZXR1cm4gKFxuICAgICAgICA8TW9kYWwgdGl0bGU9XCLsiqTtg6/rs7TquLBcIiBzdHlsZT17e2NvbG9yOidpdm9yeSd9fSBib2R5U3R5bGU9e3tiYWNrZ3JvdW5kQ29sb3I6J3NsYXRlZ3JleSd9fVxuICAgICAgICB2aXNpYmxlPXtpc1N0YXRzTW9kYWxWaXNpYmxlfSBvbkNhbmNlbD17aGlkZVN0YXRzTW9kYWx9IGZvb3Rlcj17bnVsbH0+XG4gICAgICAgICAgICB7cG1oICE9PSBudWxsP1xuICAgICAgICAgICAgPD5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNoYXJhY3Rlci1zdGF0XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL2ltYWdlcy9wbWgucG5nXCIgc3R5bGU9e3t3aWR0aDonMTAwcHgnLCBoZWlnaHQ6JzEwMHB4J319Lz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXZpZXdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e3BtaC5uYW1lfSAoe3BtaC5hY3RpdmV9KTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7ssrTroKU6IHtwbWguaHB9IC8ge3BtaC5tYXhIcH0gPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cImhwIHBtaFwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7soJXsi6DroKU6IHtwbWgubXB9IC8ge3BtaC5tYXhNcH0gPGRpdiBjbGFzc05hbWU9XCJtcC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cIm1wIHBtaFwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7qs7XqsqnroKU6IHtwbWguYXR0fTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNoYXJhY3Rlci1zdGF0XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL2ltYWdlcy95Z3kucG5nXCIgc3R5bGU9e3t3aWR0aDonMTAwcHgnLCBoZWlnaHQ6JzEwMHB4J319Lz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXZpZXdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e3lneS5uYW1lfSAoe3lneS5hY3RpdmV9KTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7ssrTroKU6IHt5Z3kuaHB9IC8ge3lneS5tYXhIcH0gPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cImhwIHlneVwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7soJXsi6DroKU6IHt5Z3kubXB9IC8ge3lneS5tYXhNcH0gPGRpdiBjbGFzc05hbWU9XCJtcC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cIm1wIHlneVwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7qs7XqsqnroKU6IHt5Z3kuYXR0fTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNoYXJhY3Rlci1zdGF0XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL2ltYWdlcy9zaHIucG5nXCIgc3R5bGU9e3t3aWR0aDonMTAwcHgnLCBoZWlnaHQ6JzEwMHB4J319Lz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXZpZXdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e3Noci5uYW1lfSAoe3Noci5hY3RpdmV9KTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7ssrTroKU6IHtzaHIuaHB9IC8ge3Noci5tYXhIcH0gPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cImhwIHNoclwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7soJXsi6DroKU6IHtzaHIubXB9IC8ge3Noci5tYXhNcH0gPGRpdiBjbGFzc05hbWU9XCJtcC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cIm1wIHNoclwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7qs7XqsqnroKU6IHtzaHIuYXR0fTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNoYXJhY3Rlci1zdGF0XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL2ltYWdlcy9zZ2gucG5nXCIgc3R5bGU9e3t3aWR0aDonMTAwcHgnLCBoZWlnaHQ6JzEwMHB4J319Lz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXZpZXdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e3NnaC5uYW1lfSAoe3NnaC5hY3RpdmV9KTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7ssrTroKU6IHtzZ2guaHB9IC8ge3NnaC5tYXhIcH0gPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cImhwIHNnaFwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7soJXsi6DroKU6IHtzZ2gubXB9IC8ge3NnaC5tYXhNcH0gPGRpdiBjbGFzc05hbWU9XCJtcC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cIm1wIHNnaFwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7qs7XqsqnroKU6IHtzZ2guYXR0fTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNoYXJhY3Rlci1zdGF0XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL2ltYWdlcy9wYXkucG5nXCIgc3R5bGU9e3t3aWR0aDonMTAwcHgnLCBoZWlnaHQ6JzEwMHB4J319Lz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0LXZpZXdcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+e3BheS5uYW1lfSAoe3BheS5hY3RpdmV9KTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7ssrTroKU6IHtwYXkuaHB9IC8ge3BheS5tYXhIcH0gPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cImhwIHBheVwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7soJXsi6DroKU6IHtwYXkubXB9IC8ge3BheS5tYXhNcH0gPGRpdiBjbGFzc05hbWU9XCJtcC1iYXJcIj48ZGl2IGNsYXNzTmFtZT1cIm1wIHBheVwiPjwvZGl2PjwvZGl2PjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj7qs7XqsqnroKU6IHtwYXkuYXR0fTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvPlxuICAgICAgICAgICAgOm51bGx9XG4gICAgICAgIDwvTW9kYWw+XG4gICAgKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgTWVtYmVyU3RhdDsiXSwibmFtZXMiOlsiUmVhY3QiLCJ1c2VTdGF0ZSIsInVzZURpc3BhdGNoIiwidXNlU2VsZWN0b3IiLCJNb2RhbCIsIk1FTUJFUl9TVEFUX1ZJU0lCTEUiLCJNZW1iZXJTdGF0IiwiZGlzcGF0Y2giLCJpc1N0YXRzTW9kYWxWaXNpYmxlIiwic3RhdGUiLCJtZW1iZXJTdGF0IiwicG1oIiwieWd5Iiwic2hyIiwic2doIiwicGF5IiwiaGlkZVN0YXRzTW9kYWwiLCJ0eXBlIiwiZGF0YSIsInRpdGxlIiwic3R5bGUiLCJjb2xvciIsImJvZHlTdHlsZSIsImJhY2tncm91bmRDb2xvciIsInZpc2libGUiLCJvbkNhbmNlbCIsImZvb3RlciIsImRpdiIsImNsYXNzTmFtZSIsImltZyIsInNyYyIsIndpZHRoIiwiaGVpZ2h0IiwibmFtZSIsImFjdGl2ZSIsImhwIiwibWF4SHAiLCJtcCIsIm1heE1wIiwiYXR0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/MemberStat.js\n");
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ pages_battle)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(689);
+// EXTERNAL MODULE: external "react-redux"
+var external_react_redux_ = __webpack_require__(22);
+// EXTERNAL MODULE: ./reducers/memberStat.js
+var reducers_memberStat = __webpack_require__(472);
+;// CONCATENATED MODULE: external "antd"
+const external_antd_namespaceObject = require("antd");
+;// CONCATENATED MODULE: ./components/MemberStat.js
+
+
+
+
+
+const MemberStat = ()=>{
+    const dispatch = (0,external_react_redux_.useDispatch)();
+    const isStatsModalVisible = (0,external_react_redux_.useSelector)((state)=>state.memberStat.isStatsModalVisible);
+    const memberStat = (0,external_react_redux_.useSelector)((state)=>state.memberStat);
+    const pmh = memberStat.pmh;
+    const ygy = memberStat.ygy;
+    const shr = memberStat.shr;
+    const sgh = memberStat.sgh;
+    const pay = memberStat.pay;
+    const hideStatsModal = ()=>{
+        dispatch({
+            type: reducers_memberStat/* MEMBER_STAT_VISIBLE */.RP,
+            data: {
+                isStatsModalVisible: false
+            }
+        });
+    };
+    return /*#__PURE__*/ jsx_runtime_.jsx(external_antd_namespaceObject.Modal, {
+        title: "\uC2A4\uD0EF\uBCF4\uAE30",
+        style: {
+            color: "ivory"
+        },
+        bodyStyle: {
+            backgroundColor: "slategrey"
+        },
+        visible: isStatsModalVisible,
+        onCancel: hideStatsModal,
+        footer: null,
+        children: pmh !== null ? /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "character-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: "/images/pmh.png",
+                            style: {
+                                width: "100px",
+                                height: "100px"
+                            }
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "stat-view",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        pmh.name,
+                                        " (",
+                                        pmh.active,
+                                        ")"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uCCB4\uB825: ",
+                                        pmh.hp,
+                                        " / ",
+                                        pmh.maxHp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "hp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "hp pmh"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uC815\uC2E0\uB825: ",
+                                        pmh.mp,
+                                        " / ",
+                                        pmh.maxMp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "mp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mp pmh"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uACF5\uACA9\uB825: ",
+                                        pmh.att
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "character-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: "/images/ygy.png",
+                            style: {
+                                width: "100px",
+                                height: "100px"
+                            }
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "stat-view",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        ygy.name,
+                                        " (",
+                                        ygy.active,
+                                        ")"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uCCB4\uB825: ",
+                                        ygy.hp,
+                                        " / ",
+                                        ygy.maxHp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "hp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "hp ygy"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uC815\uC2E0\uB825: ",
+                                        ygy.mp,
+                                        " / ",
+                                        ygy.maxMp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "mp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mp ygy"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uACF5\uACA9\uB825: ",
+                                        ygy.att
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "character-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: "/images/shr.png",
+                            style: {
+                                width: "100px",
+                                height: "100px"
+                            }
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "stat-view",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        shr.name,
+                                        " (",
+                                        shr.active,
+                                        ")"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uCCB4\uB825: ",
+                                        shr.hp,
+                                        " / ",
+                                        shr.maxHp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "hp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "hp shr"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uC815\uC2E0\uB825: ",
+                                        shr.mp,
+                                        " / ",
+                                        shr.maxMp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "mp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mp shr"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uACF5\uACA9\uB825: ",
+                                        shr.att
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "character-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: "/images/sgh.png",
+                            style: {
+                                width: "100px",
+                                height: "100px"
+                            }
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "stat-view",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        sgh.name,
+                                        " (",
+                                        sgh.active,
+                                        ")"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uCCB4\uB825: ",
+                                        sgh.hp,
+                                        " / ",
+                                        sgh.maxHp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "hp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "hp sgh"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uC815\uC2E0\uB825: ",
+                                        sgh.mp,
+                                        " / ",
+                                        sgh.maxMp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "mp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mp sgh"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uACF5\uACA9\uB825: ",
+                                        sgh.att
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "character-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                            src: "/images/pay.png",
+                            style: {
+                                width: "100px",
+                                height: "100px"
+                            }
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "stat-view",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        pay.name,
+                                        " (",
+                                        pay.active,
+                                        ")"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uCCB4\uB825: ",
+                                        pay.hp,
+                                        " / ",
+                                        pay.maxHp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "hp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "hp pay"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uC815\uC2E0\uB825: ",
+                                        pay.mp,
+                                        " / ",
+                                        pay.maxMp,
+                                        " ",
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "mp-bar",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mp pay"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    children: [
+                                        "\uACF5\uACA9\uB825: ",
+                                        pay.att
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        }) : null
+    });
+};
+/* harmony default export */ const components_MemberStat = (MemberStat);
+
+;// CONCATENATED MODULE: ./components/Menu.jsx
+
+
+
+
+
+
+const Menu = ()=>{
+    const state = (0,external_react_redux_.useSelector)((state)=>state);
+    const dispatch = (0,external_react_redux_.useDispatch)();
+    const { 0: isItemsModalVisible , 1: setIsItemsModalVisible  } = (0,external_react_.useState)(false);
+    const { 0: isRuleModalVisible , 1: setIsRuleModalVisible  } = (0,external_react_.useState)(false);
+    const { 0: isMakerModalVisible , 1: setIsMakerModalVisible  } = (0,external_react_.useState)(false);
+    const showStatsModal = ()=>{
+        dispatch({
+            type: reducers_memberStat/* MEMBER_STAT */.CH,
+            data: {
+                gameToken: state.index.gameToken
+            }
+        });
+        dispatch({
+            type: reducers_memberStat/* MEMBER_STAT_VISIBLE */.RP,
+            data: {
+                isStatsModalVisible: true
+            }
+        });
+    };
+    const showItemsModal = ()=>{
+        setIsItemsModalVisible(true);
+    };
+    const hideItemsModal = ()=>{
+        setIsItemsModalVisible(false);
+    };
+    const showRuleModal = ()=>{
+        setIsRuleModalVisible(true);
+    };
+    const hideRuleModal = ()=>{
+        setIsRuleModalVisible(false);
+    };
+    const showMakerModal = ()=>{
+        setIsMakerModalVisible(true);
+    };
+    const hideMakerModal = ()=>{
+        setIsMakerModalVisible(false);
+    };
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("nav", {
+                className: "menu",
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
+                    className: "menu-link",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                            className: "menu-item",
+                            onClick: showStatsModal,
+                            children: "\uC2A4\uD0EF \uBCF4\uAE30"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                            className: "menu-item",
+                            onClick: showItemsModal,
+                            children: "\uC544\uC774\uD15C \uBCF4\uAE30"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                            className: "menu-item",
+                            onClick: showRuleModal,
+                            children: "\uAC8C\uC784 \uC124\uBA85"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                            className: "developer-information",
+                            onClick: showMakerModal,
+                            children: "\uC81C\uC791\uC790 \uC815\uBCF4"
+                        })
+                    ]
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
+                className: "button-nav",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "hp-bar",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "hp pmh"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                className: "button-character pmh"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "hp-bar",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "hp ygy"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                className: "button-character ygy"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "hp-bar",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "hp shr"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                className: "button-character shr"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "hp-bar",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "hp sgh"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                className: "button-character sgh"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "hp-bar",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "hp pay"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                className: "button-character pay"
+                            })
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(components_MemberStat, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(external_antd_namespaceObject.Modal, {
+                title: "\uC544\uC774\uD15C \uBCF4\uAE30",
+                style: {
+                    color: "ivory"
+                },
+                bodyStyle: {
+                    backgroundColor: "black"
+                },
+                visible: isItemsModalVisible,
+                onCancel: hideItemsModal,
+                footer: null
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(external_antd_namespaceObject.Modal, {
+                title: "\uAC8C\uC784 \uC124\uBA85",
+                style: {
+                    color: "ivory"
+                },
+                bodyStyle: {
+                    backgroundColor: "black"
+                },
+                visible: isRuleModalVisible,
+                onCancel: hideRuleModal,
+                footer: null,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uC81C4\uD574\uC800\uAE30\uC9C0\uC5D0\uC11C \uC81C2\uD574\uC800\uAE30\uC9C0\uAE4C\uC9C0 \uC774\uB3D9\uD574 \uCF00\uC774\uBE14\uCE74\uB97C \uD0C0\uACE0 \uD0C8\uCD9C\uD558\uC2ED\uC2DC\uC624."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "[\uC2A4\uD0EF \uBCF4\uAE30]\uB97C \uC120\uD0DD\uD558\uBA74 \uD300\uC6D0\uC758 \uCCB4\uB825, \uC815\uC2E0\uB825, \uACF5\uACA9\uB825, \uC2E0\uB8B0\uB3C4(\uCE5C\uBC00\uB3C4)\uB97C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4. (\uC2E0\uD574\uB7C9, \uC11C\uC9C0\uD601, \uBC31\uC560\uC601, \uBC15\uBB34\uD604, \uC720\uAE08\uC774)"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "[\uC544\uC774\uD15C \uBCF4\uAE30]\uB97C \uC120\uD0DD\uD558\uBA74 \uADF8\uB3D9\uC548 \uBAA8\uC740 \uC544\uC774\uD15C\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4. (\uC2DD\uB7C9, \uCD1D, \uC57D)"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uC704 \uB450 \uAC00\uC9C0\uB97C \uD655\uC778\uD55C \uD6C4 \uC774\uB3D9\uD560 \uC7A5\uC18C\uB97C \uC120\uD0DD\uD558\uC2ED\uC2DC\uC624."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uC7A5\uC18C\uC5D0 \uB530\uB77C \uC544\uC774\uD15C \uD68D\uB4DD, \uD734\uC2DD\uC774 \uAC00\uB2A5\uD558\uAC70\uB098 \uC804\uD22C\uAC00 \uC77C\uC5B4\uB0A0 \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uAC01 \uC7A5\uC18C\uC5D0\uC11C \uAC00\uB2A5\uD55C \uC120\uD0DD\uC9C0\uB97C \uD655\uC778\uD55C \uD6C4 \uC120\uD0DD\uD558\uC5EC \uC8FC\uC2ED\uC2DC\uC624."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uD300\uC6D0\uC5D0\uAC8C \uB3C4\uC6C0\uC744 \uCCAD\uD560 \uACBD\uC6B0 \uC2E0\uD574\uB7C9, \uC11C\uC9C0\uD601, \uBC31\uC560\uC601\uC740 \uACF5\uACA9\uC744 \uD55C \uBC88 \uB300\uC2E0\uD560 \uC218 \uC788\uC73C\uBA70 \uBC15\uBB34\uD604, \uC720\uAE08\uC774\uB294 \uCCB4\uB825 \uD639\uC740 \uC815\uC2E0\uB825\uC744 \uD68C\uBCF5\uD558\uAC8C \uD574\uC90D\uB2C8\uB2E4. \uB3C4\uC6C0\uC744 \uBC1B\uC744 \uC218 \uC788\uB294 \uD69F\uC218\uB294 \uD574\uB2F9 \uCE90\uB9AD\uD130\uAC00 \uC0AC\uC6A9\uC790\uC5D0\uAC8C \uAC00\uC9C4 \uC2E0\uB8B0\uB3C4\uC5D0 \uBE44\uB840\uD569\uB2C8\uB2E4."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uCD1D\uC744 \uC2E0\uD574\uB7C9, \uC11C\uC9C0\uD601, \uBC31\uC560\uC601\uC5D0\uAC8C \uC904 \uACBD\uC6B0 \uC2E0\uB8B0\uB3C4\uAC00 \uC99D\uAC00\uD558\uC9C0\uB9CC \uBC15\uBB34\uD604, \uC720\uAE08\uC774\uC5D0\uAC8C \uC904 \uACBD\uC6B0 \uC815\uC2E0\uB825\uC774 \uB5A8\uC5B4\uC9D1\uB2C8\uB2E4."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(external_antd_namespaceObject.Modal, {
+                title: "\uC81C\uC791\uC790 \uC815\uBCF4",
+                style: {
+                    color: "ivory"
+                },
+                bodyStyle: {
+                    backgroundColor: "black"
+                },
+                visible: isMakerModalVisible,
+                onCancel: hideMakerModal,
+                footer: null,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uC5B4\uB450\uC6B4 \uBC14\uB2E4\uC758 \uB4F1\uBD88\uC774 \uB418\uC5B4(\uC5F0\uC0B0\uD638 \uC800)\uC758 \uD32C\uAC8C\uC784\uC785\uB2C8\uB2E4."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uBB38\uD53C\uC544, \uC2DC\uB9AC\uC988, \uB9AC\uB514\uBD81\uC2A4, \uCE74\uCE74\uD398\uC5D0 \uC5F0\uC7AC\uC911\uC774\uB2C8 \uB9CE\uC740 \uAD00\uC2EC \uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uD504\uB860\uD2B8: hjahn.dev@gmail.com"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uBC31\uC5D4\uB4DC:"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uC774\uBBF8\uC9C0: \uC5B4\uB450\uC6B4 \uBC14\uB2E4\uC758 \uC9C1\uC7A5\uC778"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "* special thanks to"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uB178\uC158 \uC815\uB9AC: \uC6B0\uC5F0"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "\uB85C\uB529 \uC774\uBBF8\uC9C0: \uBC14\uB2E4\uC19C\uC0BF\uD0D5"
+                    })
+                ]
+            })
+        ]
+    });
+};
+
+// EXTERNAL MODULE: ./reducers/battle.js
+var battle = __webpack_require__(474);
+;// CONCATENATED MODULE: ./components/SelectBtnDiv.jsx
+
+
+
+
+const SelectBtnDiv = ({ selectInfo  })=>{
+    const { 0: locationValue , 1: setLocationValue  } = (0,external_react_.useState)("");
+    const dispatch = (0,external_react_redux_.useDispatch)();
+    const state = (0,external_react_redux_.useSelector)((state)=>state);
+    const battleData = (0,external_react_redux_.useSelector)((state)=>state.battle);
+    const onClickLocation = (e)=>{
+        setLocationValue(e.target.value);
+        dispatch({
+            type: battle/* BATTLE */.UD,
+            data: {
+                status: "onGoing",
+                action: "event",
+                gameToken: state.index.gameToken,
+                inputData: {
+                    selected: {
+                        "SELECT_CD": battleData.selectCode,
+                        "OPTION_SEQ": e.target.value
+                    }
+                }
+            }
+        });
+    };
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: "selectBtnDiv",
+        children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
+            className: "playBtn",
+            onClick: onClickLocation,
+            value: selectInfo.value,
+            children: selectInfo.name
+        })
+    });
+};
+
+;// CONCATENATED MODULE: ./components/Player.jsx
+
+
+
+const Player = ()=>{
+    const battleData = (0,external_react_redux_.useSelector)((state)=>state.battle);
+    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: battleData.battle !== null ? battleData.battle.npc !== undefined ? /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "enemy-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            id: "enemy-name",
+                            children: battleData.npc.name
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                            children: [
+                                "\uCCB4\uB825:",
+                                battleData.npc.hp,
+                                "/",
+                                battleData.npc.maxHp,
+                                " \uACF5\uACA9\uB825:",
+                                battleData.npc.att,
+                                " \uACBD\uD5D8\uCE58:",
+                                battleData.npc.xp,
+                                " \uC544\uC774\uD15C:"
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    id: "after-desc"
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "player-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            id: "player-name",
+                            children: battleData.player.name
+                        }),
+                        "\uCCB4\uB825:",
+                        battleData.player.hp,
+                        "/",
+                        battleData.player.maxHp,
+                        " \uC815\uC2E0\uB825:",
+                        battleData.player.mp,
+                        "/",
+                        battleData.player.maxMp,
+                        " \uACF5\uACA9\uB825:",
+                        battleData.player.att,
+                        " \uACBD\uD5D8\uCE58: ",
+                        battleData.player.xp,
+                        " \uC544\uC774\uD15C:"
+                    ]
+                })
+            ]
+        }) : /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    id: "after-desc"
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "player-stat",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            id: "player-name",
+                            children: battleData.player.name
+                        }),
+                        "\uCCB4\uB825:",
+                        battleData.player.hp,
+                        "/",
+                        battleData.player.maxHp,
+                        " \uC815\uC2E0\uB825:",
+                        battleData.player.mp,
+                        "/",
+                        battleData.player.maxMp,
+                        " \uACF5\uACA9\uB825:",
+                        battleData.player.att,
+                        " \uACBD\uD5D8\uCE58: ",
+                        battleData.player.xp,
+                        " \uC544\uC774\uD15C:"
+                    ]
+                })
+            ]
+        }) : null
+    });
+};
+
+// EXTERNAL MODULE: ./node_modules/antd/dist/antd.css
+var antd = __webpack_require__(722);
+;// CONCATENATED MODULE: ./pages/battle.js
+
+
+
+
+
+
+
+const Battle = ()=>{
+    const battleData = (0,external_react_redux_.useSelector)((state)=>state.battle);
+    const selectOptions = battleData.select.selectOptions;
+    const scripts = battleData.scripts;
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: "battle-script",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(Menu, {}),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("section", {
+                className: "description",
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: "battle-content",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            id: "pre-desc",
+                            children: scripts !== undefined ? scripts.map((v, i)=>{
+                                return /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    children: v
+                                }, i);
+                            }) : null
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        id: "blue-dragon",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "pin"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "dong-name",
+                                children: "\uCCAD\uB8E1\uB3D9"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        id: "red-bird",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "pin"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "dong-name",
+                                children: "\uC8FC\uC791\uB3D9"
+                            })
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("section", {
+                className: "player-section",
+                children: /*#__PURE__*/ jsx_runtime_.jsx(Player, {})
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("section", {
+                className: "description",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "battle-content",
+                        children: [
+                            battleData.select.selectHead,
+                            selectOptions.map((v, i)=>{
+                                return /*#__PURE__*/ jsx_runtime_.jsx(SelectBtnDiv, {
+                                    selectInfo: v
+                                }, v.value);
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        id: "black-tortoise",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "pin"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "dong-name",
+                                children: "\uD604\uBB34\uB3D9"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        id: "white-tiger",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "pin"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "dong-name",
+                                children: "\uBC31\uD638\uB3D9"
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+};
+/* harmony default export */ const pages_battle = (Battle);
+
 
 /***/ }),
 
-/***/ "./components/Menu.jsx":
-/*!*****************************!*\
-  !*** ./components/Menu.jsx ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Menu\": () => (/* binding */ Menu)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _reducers_memberStat__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/memberStat */ \"./reducers/memberStat.js\");\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ \"antd\");\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _MemberStat__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MemberStat */ \"./components/MemberStat.js\");\n\n\n\n\n\n\nconst Menu = ()=>{\n    const state = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)((state)=>state);\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();\n    const { 0: isItemsModalVisible , 1: setIsItemsModalVisible  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);\n    const { 0: isRuleModalVisible , 1: setIsRuleModalVisible  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);\n    const { 0: isMakerModalVisible , 1: setIsMakerModalVisible  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);\n    const showStatsModal = ()=>{\n        dispatch({\n            type: _reducers_memberStat__WEBPACK_IMPORTED_MODULE_3__.MEMBER_STAT,\n            data: {\n                gameToken: state.index.gameToken\n            }\n        });\n        dispatch({\n            type: _reducers_memberStat__WEBPACK_IMPORTED_MODULE_3__.MEMBER_STAT_VISIBLE,\n            data: {\n                isStatsModalVisible: true\n            }\n        });\n    };\n    const showItemsModal = ()=>{\n        setIsItemsModalVisible(true);\n    };\n    const hideItemsModal = ()=>{\n        setIsItemsModalVisible(false);\n    };\n    const showRuleModal = ()=>{\n        setIsRuleModalVisible(true);\n    };\n    const hideRuleModal = ()=>{\n        setIsRuleModalVisible(false);\n    };\n    const showMakerModal = ()=>{\n        setIsMakerModalVisible(true);\n    };\n    const hideMakerModal = ()=>{\n        setIsMakerModalVisible(false);\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"nav\", {\n                className: \"menu\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"nav\", {\n                    className: \"menu-link\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                            className: \"menu-item\",\n                            onClick: showStatsModal,\n                            children: \"\\uC2A4\\uD0EF \\uBCF4\\uAE30\"\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                            lineNumber: 47,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                            className: \"menu-item\",\n                            onClick: showItemsModal,\n                            children: \"\\uC544\\uC774\\uD15C \\uBCF4\\uAE30\"\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                            lineNumber: 48,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                            className: \"menu-item\",\n                            onClick: showRuleModal,\n                            children: \"\\uAC8C\\uC784 \\uC124\\uBA85\"\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                            lineNumber: 49,\n                            columnNumber: 21\n                        }, undefined),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                            className: \"developer-information\",\n                            onClick: showMakerModal,\n                            children: \"\\uC81C\\uC791\\uC790 \\uC815\\uBCF4\"\n                        }, void 0, false, {\n                            fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                            lineNumber: 50,\n                            columnNumber: 21\n                        }, undefined)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                    lineNumber: 46,\n                    columnNumber: 17\n                }, undefined)\n            }, void 0, false, {\n                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                lineNumber: 45,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"nav\", {\n                className: \"button-nav\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"hp-bar\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"hp pmh\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 55,\n                                columnNumber: 21\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                className: \"button-character pmh\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 56,\n                                columnNumber: 21\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 54,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"hp-bar\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"hp ygy\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 59,\n                                columnNumber: 21\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                className: \"button-character ygy\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 60,\n                                columnNumber: 21\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 58,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"hp-bar\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"hp shr\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 63,\n                                columnNumber: 21\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                className: \"button-character shr\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 64,\n                                columnNumber: 21\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 62,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"hp-bar\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"hp sgh\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 67,\n                                columnNumber: 21\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                className: \"button-character sgh\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 68,\n                                columnNumber: 21\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 66,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"hp-bar\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"hp pay\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 71,\n                                columnNumber: 21\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                className: \"button-character pay\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                                lineNumber: 72,\n                                columnNumber: 21\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 70,\n                        columnNumber: 17\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                lineNumber: 53,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_MemberStat__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {}, void 0, false, {\n                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                lineNumber: 75,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Modal, {\n                title: \"\\uC544\\uC774\\uD15C \\uBCF4\\uAE30\",\n                style: {\n                    color: \"ivory\"\n                },\n                bodyStyle: {\n                    backgroundColor: \"black\"\n                },\n                visible: isItemsModalVisible,\n                onCancel: hideItemsModal,\n                footer: null\n            }, void 0, false, {\n                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                lineNumber: 76,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Modal, {\n                title: \"\\uAC8C\\uC784 \\uC124\\uBA85\",\n                style: {\n                    color: \"ivory\"\n                },\n                bodyStyle: {\n                    backgroundColor: \"black\"\n                },\n                visible: isRuleModalVisible,\n                onCancel: hideRuleModal,\n                footer: null,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uC81C4\\uD574\\uC800\\uAE30\\uC9C0\\uC5D0\\uC11C \\uC81C2\\uD574\\uC800\\uAE30\\uC9C0\\uAE4C\\uC9C0 \\uC774\\uB3D9\\uD574 \\uCF00\\uC774\\uBE14\\uCE74\\uB97C \\uD0C0\\uACE0 \\uD0C8\\uCD9C\\uD558\\uC2ED\\uC2DC\\uC624.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 81,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"[\\uC2A4\\uD0EF \\uBCF4\\uAE30]\\uB97C \\uC120\\uD0DD\\uD558\\uBA74 \\uD300\\uC6D0\\uC758 \\uCCB4\\uB825, \\uC815\\uC2E0\\uB825, \\uACF5\\uACA9\\uB825, \\uC2E0\\uB8B0\\uB3C4(\\uCE5C\\uBC00\\uB3C4)\\uB97C \\uD655\\uC778\\uD560 \\uC218 \\uC788\\uC2B5\\uB2C8\\uB2E4. (\\uC2E0\\uD574\\uB7C9, \\uC11C\\uC9C0\\uD601, \\uBC31\\uC560\\uC601, \\uBC15\\uBB34\\uD604, \\uC720\\uAE08\\uC774)\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 82,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"[\\uC544\\uC774\\uD15C \\uBCF4\\uAE30]\\uB97C \\uC120\\uD0DD\\uD558\\uBA74 \\uADF8\\uB3D9\\uC548 \\uBAA8\\uC740 \\uC544\\uC774\\uD15C\\uC744 \\uD655\\uC778\\uD560 \\uC218 \\uC788\\uC2B5\\uB2C8\\uB2E4. (\\uC2DD\\uB7C9, \\uCD1D, \\uC57D)\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 84,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uC704 \\uB450 \\uAC00\\uC9C0\\uB97C \\uD655\\uC778\\uD55C \\uD6C4 \\uC774\\uB3D9\\uD560 \\uC7A5\\uC18C\\uB97C \\uC120\\uD0DD\\uD558\\uC2ED\\uC2DC\\uC624.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 86,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uC7A5\\uC18C\\uC5D0 \\uB530\\uB77C \\uC544\\uC774\\uD15C \\uD68D\\uB4DD, \\uD734\\uC2DD\\uC774 \\uAC00\\uB2A5\\uD558\\uAC70\\uB098 \\uC804\\uD22C\\uAC00 \\uC77C\\uC5B4\\uB0A0 \\uC218 \\uC788\\uC2B5\\uB2C8\\uB2E4. \\uAC01 \\uC7A5\\uC18C\\uC5D0\\uC11C \\uAC00\\uB2A5\\uD55C \\uC120\\uD0DD\\uC9C0\\uB97C \\uD655\\uC778\\uD55C \\uD6C4 \\uC120\\uD0DD\\uD558\\uC5EC \\uC8FC\\uC2ED\\uC2DC\\uC624.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 87,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uD300\\uC6D0\\uC5D0\\uAC8C \\uB3C4\\uC6C0\\uC744 \\uCCAD\\uD560 \\uACBD\\uC6B0 \\uC2E0\\uD574\\uB7C9, \\uC11C\\uC9C0\\uD601, \\uBC31\\uC560\\uC601\\uC740 \\uACF5\\uACA9\\uC744 \\uD55C \\uBC88 \\uB300\\uC2E0\\uD560 \\uC218 \\uC788\\uC73C\\uBA70 \\uBC15\\uBB34\\uD604, \\uC720\\uAE08\\uC774\\uB294 \\uCCB4\\uB825 \\uD639\\uC740 \\uC815\\uC2E0\\uB825\\uC744 \\uD68C\\uBCF5\\uD558\\uAC8C \\uD574\\uC90D\\uB2C8\\uB2E4. \\uB3C4\\uC6C0\\uC744 \\uBC1B\\uC744 \\uC218 \\uC788\\uB294 \\uD69F\\uC218\\uB294 \\uD574\\uB2F9 \\uCE90\\uB9AD\\uD130\\uAC00 \\uC0AC\\uC6A9\\uC790\\uC5D0\\uAC8C \\uAC00\\uC9C4 \\uC2E0\\uB8B0\\uB3C4\\uC5D0 \\uBE44\\uB840\\uD569\\uB2C8\\uB2E4.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 89,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uCD1D\\uC744 \\uC2E0\\uD574\\uB7C9, \\uC11C\\uC9C0\\uD601, \\uBC31\\uC560\\uC601\\uC5D0\\uAC8C \\uC904 \\uACBD\\uC6B0 \\uC2E0\\uB8B0\\uB3C4\\uAC00 \\uC99D\\uAC00\\uD558\\uC9C0\\uB9CC \\uBC15\\uBB34\\uD604, \\uC720\\uAE08\\uC774\\uC5D0\\uAC8C \\uC904 \\uACBD\\uC6B0 \\uC815\\uC2E0\\uB825\\uC774 \\uB5A8\\uC5B4\\uC9D1\\uB2C8\\uB2E4.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 92,\n                        columnNumber: 17\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                lineNumber: 79,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Modal, {\n                title: \"\\uC81C\\uC791\\uC790 \\uC815\\uBCF4\",\n                style: {\n                    color: \"ivory\"\n                },\n                bodyStyle: {\n                    backgroundColor: \"black\"\n                },\n                visible: isMakerModalVisible,\n                onCancel: hideMakerModal,\n                footer: null,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uC5B4\\uB450\\uC6B4 \\uBC14\\uB2E4\\uC758 \\uB4F1\\uBD88\\uC774 \\uB418\\uC5B4(\\uC5F0\\uC0B0\\uD638 \\uC800)\\uC758 \\uD32C\\uAC8C\\uC784\\uC785\\uB2C8\\uB2E4.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 97,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uBB38\\uD53C\\uC544, \\uC2DC\\uB9AC\\uC988, \\uB9AC\\uB514\\uBD81\\uC2A4, \\uCE74\\uCE74\\uD398\\uC5D0 \\uC5F0\\uC7AC\\uC911\\uC774\\uB2C8 \\uB9CE\\uC740 \\uAD00\\uC2EC \\uBD80\\uD0C1\\uB4DC\\uB9BD\\uB2C8\\uB2E4.\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 98,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uD504\\uB860\\uD2B8: hjahn.dev@gmail.com\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 99,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uBC31\\uC5D4\\uB4DC:\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 100,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uC774\\uBBF8\\uC9C0: \\uC5B4\\uB450\\uC6B4 \\uBC14\\uB2E4\\uC758 \\uC9C1\\uC7A5\\uC778\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 101,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"* special thanks to\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 102,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uB178\\uC158 \\uC815\\uB9AC: \\uC6B0\\uC5F0\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 103,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"\\uB85C\\uB529 \\uC774\\uBBF8\\uC9C0: \\uBC14\\uB2E4\\uC19C\\uC0BF\\uD0D5\"\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                        lineNumber: 104,\n                        columnNumber: 17\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/components/Menu.jsx\",\n                lineNumber: 95,\n                columnNumber: 13\n            }, undefined)\n        ]\n    }, void 0, true);\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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bUI7Ozs7O2lDQUFJO2tDQUMxQiw4REFBQ0EsR0FBQztrQ0FBQyx5Q0FBUzs7Ozs7aUNBQWdCO2tDQUNoQiw4REFBWEEsR0FBQztrQ0FBQyxpRUFBYTs7Ozs7aUNBQUk7Ozs7Ozt5QkFDaEI7O29CQUNULENBQ0w7Q0FDTCIsInNvdXJjZXMiOlsid2VicGFjazovL2FiZGdhbWUvLi9jb21wb25lbnRzL01lbnUuanN4P2I4NjkiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgdXNlRGlzcGF0Y2gsIHVzZVNlbGVjdG9yIH0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHsgTUVNQkVSX1NUQVQsIE1FTUJFUl9TVEFUX1ZJU0lCTEUgfSBmcm9tICcuLi9yZWR1Y2Vycy9tZW1iZXJTdGF0JztcbmltcG9ydCB7IE1vZGFsIH0gZnJvbSAnYW50ZCc7XG5pbXBvcnQgTWVtYmVyU3RhdCBmcm9tICcuL01lbWJlclN0YXQnO1xuXG5leHBvcnQgY29uc3QgTWVudSA9ICgpID0+IHtcbiAgICBjb25zdCBzdGF0ZSA9IHVzZVNlbGVjdG9yKChzdGF0ZSkgPT4gc3RhdGUpO1xuICAgIGNvbnN0IGRpc3BhdGNoID0gdXNlRGlzcGF0Y2goKTtcbiAgICBjb25zdCBbaXNJdGVtc01vZGFsVmlzaWJsZSwgc2V0SXNJdGVtc01vZGFsVmlzaWJsZSBdID0gdXNlU3RhdGUoZmFsc2UpO1xuICAgIGNvbnN0IFtpc1J1bGVNb2RhbFZpc2libGUsIHNldElzUnVsZU1vZGFsVmlzaWJsZSBdID0gdXNlU3RhdGUoZmFsc2UpO1xuICAgIGNvbnN0IFtpc01ha2VyTW9kYWxWaXNpYmxlLCBzZXRJc01ha2VyTW9kYWxWaXNpYmxlIF0gPSB1c2VTdGF0ZShmYWxzZSk7XG5cbiAgICBjb25zdCBzaG93U3RhdHNNb2RhbCA9ICgpID0+IHtcbiAgICAgICAgZGlzcGF0Y2goe1xuICAgICAgICAgICAgdHlwZTogTUVNQkVSX1NUQVQsXG4gICAgICAgICAgICBkYXRhOiB7IGdhbWVUb2tlbjogc3RhdGUuaW5kZXguZ2FtZVRva2VufVxuICAgICAgICB9KTtcbiAgICAgICAgZGlzcGF0Y2goe1xuICAgICAgICAgICAgdHlwZTogTUVNQkVSX1NUQVRfVklTSUJMRSxcbiAgICAgICAgICAgIGRhdGE6IHsgaXNTdGF0c01vZGFsVmlzaWJsZTogdHJ1ZX1cbiAgICAgICAgfSk7IFxuICAgIH1cbiAgICBcbiAgICBjb25zdCBzaG93SXRlbXNNb2RhbCA9ICgpID0+IHtcbiAgICAgICAgc2V0SXNJdGVtc01vZGFsVmlzaWJsZSh0cnVlKTtcbiAgICB9XG4gICAgY29uc3QgaGlkZUl0ZW1zTW9kYWwgPSAoKSA9PiB7XG4gICAgICAgIHNldElzSXRlbXNNb2RhbFZpc2libGUoZmFsc2UpO1xuICAgIH1cbiAgICBjb25zdCBzaG93UnVsZU1vZGFsID0gKCkgPT4ge1xuICAgICAgICBzZXRJc1J1bGVNb2RhbFZpc2libGUodHJ1ZSk7XG4gICAgfVxuICAgIGNvbnN0IGhpZGVSdWxlTW9kYWwgPSAoKSA9PiB7XG4gICAgICAgIHNldElzUnVsZU1vZGFsVmlzaWJsZShmYWxzZSk7XG4gICAgfVxuICAgIGNvbnN0IHNob3dNYWtlck1vZGFsID0gKCkgPT4ge1xuICAgICAgICBzZXRJc01ha2VyTW9kYWxWaXNpYmxlKHRydWUpO1xuICAgIH1cbiAgICBjb25zdCBoaWRlTWFrZXJNb2RhbCA9ICgpID0+IHtcbiAgICAgICAgc2V0SXNNYWtlck1vZGFsVmlzaWJsZShmYWxzZSk7XG4gICAgfVxuICAgIHJldHVybiAoXG4gICAgICAgIDw+XG4gICAgICAgICAgICA8bmF2IGNsYXNzTmFtZT1cIm1lbnVcIj5cbiAgICAgICAgICAgICAgICA8bmF2IGNsYXNzTmFtZT1cIm1lbnUtbGlua1wiPlxuICAgICAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJtZW51LWl0ZW1cIiBvbkNsaWNrPXtzaG93U3RhdHNNb2RhbH0+7Iqk7YOvIOuztOq4sDwvYT5cbiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwibWVudS1pdGVtXCIgb25DbGljaz17c2hvd0l0ZW1zTW9kYWx9PuyVhOydtO2FnCDrs7TquLA8L2E+XG4gICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cIm1lbnUtaXRlbVwiIG9uQ2xpY2s9e3Nob3dSdWxlTW9kYWx9PuqyjOyehCDshKTrqoU8L2E+XG4gICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cImRldmVsb3Blci1pbmZvcm1hdGlvblwiIG9uQ2xpY2s9e3Nob3dNYWtlck1vZGFsfT7soJzsnpHsnpAg7KCV67O0PC9hPlxuICAgICAgICAgICAgICAgIDwvbmF2PlxuICAgICAgICAgICAgPC9uYXY+XG4gICAgICAgICAgICA8bmF2IGNsYXNzTmFtZT1cImJ1dHRvbi1uYXZcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhwLWJhclwiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhwIHBtaFwiPjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImJ1dHRvbi1jaGFyYWN0ZXIgcG1oXCI+PC9idXR0b24+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJocCB5Z3lcIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJidXR0b24tY2hhcmFjdGVyIHlneVwiPjwvYnV0dG9uPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaHAtYmFyXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaHAgc2hyXCI+PC9kaXY+ICAgIFxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImJ1dHRvbi1jaGFyYWN0ZXIgc2hyXCI+PC9idXR0b24+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJocC1iYXJcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJocCBzZ2hcIj48L2Rpdj4gXG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiYnV0dG9uLWNoYXJhY3RlciBzZ2hcIj48L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhwLWJhclwiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhwIHBheVwiPjwvZGl2PiAgICAgXG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiYnV0dG9uLWNoYXJhY3RlciBwYXlcIj48L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj4gICAgXG4gICAgICAgICAgICA8L25hdj5cbiAgICAgICAgICAgIDxNZW1iZXJTdGF0IC8+XG4gICAgICAgICAgICA8TW9kYWwgdGl0bGU9XCLslYTsnbTthZwg67O06riwXCIgc3R5bGU9e3tjb2xvcjonaXZvcnknfX0gYm9keVN0eWxlPXt7YmFja2dyb3VuZENvbG9yOidibGFjayd9fVxuICAgICAgICAgICAgdmlzaWJsZT17aXNJdGVtc01vZGFsVmlzaWJsZX0gb25DYW5jZWw9e2hpZGVJdGVtc01vZGFsfSBmb290ZXI9e251bGx9PlxuICAgICAgICAgICAgPC9Nb2RhbD5cbiAgICAgICAgICAgIDxNb2RhbCB0aXRsZT1cIuqyjOyehCDshKTrqoVcIiBzdHlsZT17e2NvbG9yOidpdm9yeSd9fSBib2R5U3R5bGU9e3tiYWNrZ3JvdW5kQ29sb3I6J2JsYWNrJ319XG4gICAgICAgICAgICB2aXNpYmxlPXtpc1J1bGVNb2RhbFZpc2libGV9IG9uQ2FuY2VsPXtoaWRlUnVsZU1vZGFsfSBmb290ZXI9e251bGx9PlxuICAgICAgICAgICAgICAgIDxwPuygnDTtlbTsoIDquLDsp4Dsl5DshJwg7KCcMu2VtOyggOq4sOyngOq5jOyngCDsnbTrj5ntlbQg7LyA7J2067iU7Lm066W8IO2DgOqzoCDtg4jstpztlZjsi63si5zsmKQuPC9wPlxuICAgICAgICAgICAgICAgIDxwPlvsiqTtg68g67O06riwXeulvCDshKDtg53tlZjrqbQg7YyA7JuQ7J2YIOyytOugpSwg7KCV7Iug66ClLCDqs7XqsqnroKUsIOyLoOuisOuPhCjsuZzrsIDrj4Qp66W8IO2ZleyduO2VoCDsiJgg7J6I7Iq164uI64ukLlxuICAgICAgICAgICAgICAgICAgICAo7Iug7ZW065+JLCDshJzsp4DtmIEsIOuwseyVoOyYgSwg67CV66y07ZiELCDsnKDquIjsnbQpPC9wPlxuICAgICAgICAgICAgICAgIDxwPlvslYTsnbTthZwg67O06riwXeulvCDshKDtg53tlZjrqbQg6re464+Z7JWIIOuqqOydgCDslYTsnbTthZzsnYQg7ZmV7J247ZWgIOyImCDsnojsirXri4jri6QuXG4gICAgICAgICAgICAgICAgICAgICjsi53rn4ksIOy0nSwg7JW9KTwvcD5cbiAgICAgICAgICAgICAgICA8cD7snIQg65GQIOqwgOyngOulvCDtmZXsnbjtlZwg7ZuEIOydtOuPme2VoCDsnqXshozrpbwg7ISg7YOd7ZWY7Iut7Iuc7JikLjwvcD5cbiAgICAgICAgICAgICAgICA8cD7snqXshozsl5Ag65Sw6528IOyVhOydtO2FnCDtmo3rk50sIO2ctOyLneydtCDqsIDriqXtlZjqsbDrgpgg7KCE7Yis6rCAIOydvOyWtOuCoCDsiJgg7J6I7Iq164uI64ukLiBcbiAgICAgICAgICAgICAgICAgICAg6rCBIOyepeyGjOyXkOyEnCDqsIDriqXtlZwg7ISg7YOd7KeA66W8IO2ZleyduO2VnCDtm4Qg7ISg7YOd7ZWY7JesIOyjvOyLreyLnOyYpC48L3A+XG4gICAgICAgICAgICAgICAgPHA+7YyA7JuQ7JeQ6rKMIOuPhOybgOydhCDssq3tlaAg6rK97JqwIOyLoO2VtOufiSwg7ISc7KeA7ZiBLCDrsLHslaDsmIHsnYAg6rO16rKp7J2EIO2VnCDrsogg64yA7Iug7ZWgIOyImCDsnojsnLzrqbBcbiAgICAgICAgICAgICAgICAgICAg67CV66y07ZiELCDsnKDquIjsnbTripQg7LK066ClIO2YueydgCDsoJXsi6DroKXsnYQg7ZqM67O17ZWY6rKMIO2VtOykjeuLiOuLpC5cbiAgICAgICAgICAgICAgICAgICAg64+E7JuA7J2EIOuwm+ydhCDsiJgg7J6I64qUIO2an+yImOuKlCDtlbTri7kg7LqQ66at7YSw6rCAIOyCrOyaqeyekOyXkOqyjCDqsIDsp4Qg7Iug66Kw64+E7JeQIOu5hOuhgO2VqeuLiOuLpC48L3A+XG4gICAgICAgICAgICAgICAgPHA+7LSd7J2EIOyLoO2VtOufiSwg7ISc7KeA7ZiBLCDrsLHslaDsmIHsl5Dqsowg7KSEIOqyveyasCDsi6DrorDrj4TqsIAg7Kad6rCA7ZWY7KeA66eMXG4gICAgICAgICAgICAgICAgICAgIOuwleustO2YhCwg7Jyg6riI7J207JeQ6rKMIOykhCDqsr3smrAg7KCV7Iug66Cl7J20IOuWqOyWtOynkeuLiOuLpC48L3A+IFxuICAgICAgICAgICAgPC9Nb2RhbD4gICAgICAgIFxuICAgICAgICAgICAgPE1vZGFsIHRpdGxlPVwi7KCc7J6R7J6QIOygleuztFwiIHN0eWxlPXt7Y29sb3I6J2l2b3J5J319IGJvZHlTdHlsZT17e2JhY2tncm91bmRDb2xvcjonYmxhY2snfX1cbiAgICAgICAgICAgIHZpc2libGU9e2lzTWFrZXJNb2RhbFZpc2libGV9IG9uQ2FuY2VsPXtoaWRlTWFrZXJNb2RhbH0gZm9vdGVyPXtudWxsfT5cbiAgICAgICAgICAgICAgICA8cD7slrTrkZDsmrQg67CU64uk7J2YIOuTseu2iOydtCDrkJjslrQo7Jew7IKw7Zi4IOyggCnsnZgg7Yys6rKM7J6E7J6F64uI64ukLjwvcD5cbiAgICAgICAgICAgICAgICA8cD7rrLjtlLzslYQsIOyLnOumrOymiCwg66as65SU67aB7IqkLCDsubTsubTtjpjsl5Ag7Jew7J6s7KSR7J2064uIIOunjuydgCDqtIDsi6wg67aA7YOB65Oc66a964uI64ukLjwvcD5cbiAgICAgICAgICAgICAgICA8cD7tlITroaDtirg6IGhqYWhuLmRldkBnbWFpbC5jb208L3A+XG4gICAgICAgICAgICAgICAgPHA+67Cx7JeU65OcOjwvcD5cbiAgICAgICAgICAgICAgICA8cD7snbTrr7jsp4A6IOyWtOuRkOyatCDrsJTri6TsnZgg7KeB7J6l7J24PC9wPlxuICAgICAgICAgICAgICAgIDxwPiogc3BlY2lhbCB0aGFua3MgdG88L3A+XG4gICAgICAgICAgICAgICAgPHA+64W47IWYIOygleumrDog7Jqw7JewPC9wPlxuICAgICAgICAgICAgICAgIDxwPuuhnOuUqSDsnbTrr7jsp4A6IOuwlOuLpOyGnOyCv+2DlTwvcD5cbiAgICAgICAgICAgIDwvTW9kYWw+XG4gICAgICAgIDwvPlxuICAgICk7XG59XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJ1c2VTdGF0ZSIsInVzZURpc3BhdGNoIiwidXNlU2VsZWN0b3IiLCJNRU1CRVJfU1RBVCIsIk1FTUJFUl9TVEFUX1ZJU0lCTEUiLCJNb2RhbCIsIk1lbWJlclN0YXQiLCJNZW51Iiwic3RhdGUiLCJkaXNwYXRjaCIsImlzSXRlbXNNb2RhbFZpc2libGUiLCJzZXRJc0l0ZW1zTW9kYWxWaXNpYmxlIiwiaXNSdWxlTW9kYWxWaXNpYmxlIiwic2V0SXNSdWxlTW9kYWxWaXNpYmxlIiwiaXNNYWtlck1vZGFsVmlzaWJsZSIsInNldElzTWFrZXJNb2RhbFZpc2libGUiLCJzaG93U3RhdHNNb2RhbCIsInR5cGUiLCJkYXRhIiwiZ2FtZVRva2VuIiwiaW5kZXgiLCJpc1N0YXRzTW9kYWxWaXNpYmxlIiwic2hvd0l0ZW1zTW9kYWwiLCJoaWRlSXRlbXNNb2RhbCIsInNob3dSdWxlTW9kYWwiLCJoaWRlUnVsZU1vZGFsIiwic2hvd01ha2VyTW9kYWwiLCJoaWRlTWFrZXJNb2RhbCIsIm5hdiIsImNsYXNzTmFtZSIsImEiLCJvbkNsaWNrIiwiZGl2IiwiYnV0dG9uIiwidGl0bGUiLCJzdHlsZSIsImNvbG9yIiwiYm9keVN0eWxlIiwiYmFja2dyb3VuZENvbG9yIiwidmlzaWJsZSIsIm9uQ2FuY2VsIiwiZm9vdGVyIiwicCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Menu.jsx\n");
-
-/***/ }),
-
-/***/ "./components/Players.jsx":
-/*!********************************!*\
-  !*** ./components/Players.jsx ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Players\": () => (/* binding */ Players)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Players = ()=>{\n    const player = {\n        att: \"5\",\n        hp: \"50\",\n        lev: \"1\",\n        maxHp: \"50\",\n        maxMp: \"100\",\n        mp: \"100\",\n        name: \"hj\",\n        reqdXp: \"15\",\n        xp: \"0\"\n    };\n    const npc = {\n        att: \"8\",\n        maxHp: \"60\",\n        line: \"NO_TEXT\",\n        name: \"\\uC801C\",\n        hp: \"60\",\n        xp: \"10\"\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"enemy-stat\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        id: \"enemy-name\",\n                        children: npc.name\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Players.jsx\",\n                        lineNumber: 11,\n                        columnNumber: 17\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: [\n                            \"\\uCCB4\\uB825:\",\n                            npc.hp,\n                            \"/\",\n                            npc.maxHp,\n                            \" \\uACF5\\uACA9\\uB825:\",\n                            npc.att,\n                            \" \\uACBD\\uD5D8\\uCE58:\",\n                            npc.xp,\n                            \" \\uC544\\uC774\\uD15C:\"\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/components/Players.jsx\",\n                        lineNumber: 12,\n                        columnNumber: 17\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/components/Players.jsx\",\n                lineNumber: 10,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                id: \"after-desc\"\n            }, void 0, false, {\n                fileName: \"/home/jin/front/abdGame/components/Players.jsx\",\n                lineNumber: 14,\n                columnNumber: 13\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"player-stat\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        id: \"player-name\",\n                        children: player.name\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/components/Players.jsx\",\n                        lineNumber: 17,\n                        columnNumber: 17\n                    }, undefined),\n                    \"\\uCCB4\\uB825:\",\n                    player.hp,\n                    \"/\",\n                    player.maxHp,\n                    \" \\uC815\\uC2E0\\uB825:\",\n                    player.mp,\n                    \"/\",\n                    player.maxMp,\n                    \" \\uACF5\\uACA9\\uB825:\",\n                    player.att,\n                    \" \\uACBD\\uD5D8\\uCE58: \",\n                    player.xp,\n                    \" \\uC544\\uC774\\uD15C:\"\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/components/Players.jsx\",\n                lineNumber: 16,\n                columnNumber: 13\n            }, undefined)\n        ]\n    }, void 0, true);\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL1BsYXllcnMuanN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7QUFBMEI7QUFFbkIsTUFBTUMsT0FBTyxHQUFHLElBQU07SUFDekIsTUFBTUMsTUFBTSxHQUFHO1FBQUNDLEdBQUcsRUFBRSxHQUFHO1FBQUVDLEVBQUUsRUFBRSxJQUFJO1FBQUVDLEdBQUcsRUFBRSxHQUFHO1FBQUVDLEtBQUssRUFBRSxJQUFJO1FBQUVDLEtBQUssRUFBRSxLQUFLO1FBQUVDLEVBQUUsRUFBRSxLQUFLO1FBQ2xGQyxJQUFJLEVBQUUsSUFBSTtRQUFFQyxNQUFNLEVBQUUsSUFBSTtRQUFFQyxFQUFFLEVBQUUsR0FBRztLQUFDO0lBQ2xDLE1BQU1DLEdBQUcsR0FBRztRQUFDVCxHQUFHLEVBQUUsR0FBRztRQUFFRyxLQUFLLEVBQUUsSUFBSTtRQUFFTyxJQUFJLEVBQUUsU0FBUztRQUFFSixJQUFJLEVBQUUsU0FBSTtRQUFJTCxFQUFFLEVBQUUsSUFBSTtRQUFFTyxFQUFFLEVBQUUsSUFBSTtLQUFDO0lBRXBGLHFCQUNFOzswQkFDSSw4REFBQ0csS0FBRztnQkFBQ0MsU0FBUyxFQUFDLFlBQVk7O2tDQUN2Qiw4REFBQ0QsS0FBRzt3QkFBQ0UsRUFBRSxFQUFDLFlBQVk7a0NBQUVKLEdBQUcsQ0FBQ0gsSUFBSTs7Ozs7aUNBQU87a0NBQ3JDLDhEQUFDUSxHQUFDOzs0QkFBQyxlQUFHOzRCQUFLTCxHQUFHLENBQUNSLEVBQUU7NEJBQUMsR0FBQzs0QkFBQ1EsR0FBRyxDQUFDTixLQUFLOzRCQUFDLHNCQUFLOzRCQUFPTSxHQUFHLENBQUNULEdBQUc7NEJBQUMsc0JBQUs7NEJBQU9TLEdBQUcsQ0FBQ0QsRUFBRTs0QkFBQyxzQkFBSzs7Ozs7O2lDQUFVOzs7Ozs7eUJBQzVEOzBCQUM1Qiw4REFBQ0csS0FBRztnQkFBQ0UsRUFBRSxFQUFDLFlBQVk7Ozs7O3lCQUNkOzBCQUNOLDhEQUFDRixLQUFHO2dCQUFDQyxTQUFTLEVBQUMsYUFBYTs7a0NBQ3hCLDhEQUFDRCxLQUFHO3dCQUFDRSxFQUFFLEVBQUMsYUFBYTtrQ0FBRWQsTUFBTSxDQUFDTyxJQUFJOzs7OztpQ0FBTztvQkFBQSxlQUN0QztvQkFBS1AsTUFBTSxDQUFDRSxFQUFFO29CQUFDLEdBQUM7b0JBQUNGLE1BQU0sQ0FBQ0ksS0FBSztvQkFBQyxzQkFBSztvQkFBT0osTUFBTSxDQUFDTSxFQUFFO29CQUFDLEdBQUM7b0JBQUNOLE1BQU0sQ0FBQ0ssS0FBSztvQkFBQyxzQkFBSztvQkFBT0wsTUFBTSxDQUFDQyxHQUFHO29CQUFDLHVCQUFNO29CQUFPRCxNQUFNLENBQUNTLEVBQUU7b0JBQUMsc0JBQ2xHOzs7Ozs7eUJBQU07O29CQUNQLENBQ0w7Q0FDM0IiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hYmRnYW1lLy4vY29tcG9uZW50cy9QbGF5ZXJzLmpzeD80MzE0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmV4cG9ydCBjb25zdCBQbGF5ZXJzID0gKCkgPT4ge1xuICAgIGNvbnN0IHBsYXllciA9IHthdHQ6IFwiNVwiLCBocDogXCI1MFwiLCBsZXY6IFwiMVwiLCBtYXhIcDogXCI1MFwiLCBtYXhNcDogXCIxMDBcIiwgbXA6IFwiMTAwXCIsIFxuICAgIG5hbWU6IFwiaGpcIiwgcmVxZFhwOiBcIjE1XCIsIHhwOiBcIjBcIn07XG4gICAgY29uc3QgbnBjID0ge2F0dDogXCI4XCIsIG1heEhwOiBcIjYwXCIsIGxpbmU6IFwiTk9fVEVYVFwiLCBuYW1lOiBcIuyggUNcIiwgaHA6IFwiNjBcIiwgeHA6IFwiMTBcIn07XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgICAgPD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZW5lbXktc3RhdFwiPlxuICAgICAgICAgICAgICAgIDxkaXYgaWQ9XCJlbmVteS1uYW1lXCI+e25wYy5uYW1lfTwvZGl2PiBcbiAgICAgICAgICAgICAgICA8cD7ssrTroKU6e25wYy5ocH0ve25wYy5tYXhIcH0g6rO16rKp66ClOntucGMuYXR0fSDqsr3tl5jsuZg6e25wYy54cH0g7JWE7J207YWcOjwvcD5cbiAgICAgICAgICAgIDwvZGl2PiAgICBcbiAgICAgICAgICAgIDxkaXYgaWQ9XCJhZnRlci1kZXNjXCI+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGxheWVyLXN0YXRcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGlkPVwicGxheWVyLW5hbWVcIj57cGxheWVyLm5hbWV9PC9kaXY+IFxuICAgICAgICAgICAgICAgIOyytOugpTp7cGxheWVyLmhwfS97cGxheWVyLm1heEhwfSDsoJXsi6DroKU6e3BsYXllci5tcH0ve3BsYXllci5tYXhNcH0g6rO16rKp66ClOntwbGF5ZXIuYXR0fSDqsr3tl5jsuZg6IHtwbGF5ZXIueHB9IOyVhOydtO2FnDpcbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8Lz5cbiAgICApO1xufSJdLCJuYW1lcyI6WyJSZWFjdCIsIlBsYXllcnMiLCJwbGF5ZXIiLCJhdHQiLCJocCIsImxldiIsIm1heEhwIiwibWF4TXAiLCJtcCIsIm5hbWUiLCJyZXFkWHAiLCJ4cCIsIm5wYyIsImxpbmUiLCJkaXYiLCJjbGFzc05hbWUiLCJpZCIsInAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Players.jsx\n");
-
-/***/ }),
-
-/***/ "./components/SelectBtnDiv.jsx":
-/*!*************************************!*\
-  !*** ./components/SelectBtnDiv.jsx ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"SelectBtnDiv\": () => (/* binding */ SelectBtnDiv)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst SelectBtnDiv = ({ selectInfo  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"selectBtnDiv\",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n            className: \"playBtn\",\n            children: selectInfo.name\n        }, void 0, false, {\n            fileName: \"/home/jin/front/abdGame/components/SelectBtnDiv.jsx\",\n            lineNumber: 6,\n            columnNumber: 13\n        }, undefined)\n    }, void 0, false, {\n        fileName: \"/home/jin/front/abdGame/components/SelectBtnDiv.jsx\",\n        lineNumber: 5,\n        columnNumber: 9\n    }, undefined);\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL1NlbGVjdEJ0bkRpdi5qc3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTtBQUEwQjtBQUVuQixNQUFNQyxZQUFZLEdBQUcsQ0FBQyxFQUFDQyxVQUFVLEdBQUMsR0FBSztJQUMxQyxxQkFDSSw4REFBQ0MsS0FBRztRQUFDQyxTQUFTLEVBQUMsY0FBYztrQkFDekIsNEVBQUNDLFFBQU07WUFBQ0QsU0FBUyxFQUFDLFNBQVM7c0JBQUVGLFVBQVUsQ0FBQ0ksSUFBSTs7Ozs7cUJBQVU7Ozs7O2lCQUNwRCxDQUNSO0NBQ0wiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hYmRnYW1lLy4vY29tcG9uZW50cy9TZWxlY3RCdG5EaXYuanN4PzUwMGEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcblxuZXhwb3J0IGNvbnN0IFNlbGVjdEJ0bkRpdiA9ICh7c2VsZWN0SW5mb30pID0+IHtcbiAgICByZXR1cm4gKFxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlbGVjdEJ0bkRpdlwiPlxuICAgICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJwbGF5QnRuXCI+e3NlbGVjdEluZm8ubmFtZX08L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgKTtcbn0iXSwibmFtZXMiOlsiUmVhY3QiLCJTZWxlY3RCdG5EaXYiLCJzZWxlY3RJbmZvIiwiZGl2IiwiY2xhc3NOYW1lIiwiYnV0dG9uIiwibmFtZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/SelectBtnDiv.jsx\n");
-
-/***/ }),
-
-/***/ "./pages/battle.js":
-/*!*************************!*\
-  !*** ./pages/battle.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../components/Menu */ \"./components/Menu.jsx\");\n/* harmony import */ var _components_SelectBtnDiv__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../components/SelectBtnDiv */ \"./components/SelectBtnDiv.jsx\");\n/* harmony import */ var _components_Players__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../components/Players */ \"./components/Players.jsx\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/dist/antd.css */ \"./node_modules/antd/dist/antd.css\");\n/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\nconst Battle = ()=>{\n    const battleData = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)((state)=>state.battle);\n    const selectOptions = battleData.selectOptions;\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"battle-script\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_Menu__WEBPACK_IMPORTED_MODULE_2__.Menu, {}, void 0, false, {\n                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                lineNumber: 13,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n                className: \"description\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"battle-content\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"select\", {\n                                id: \"selectWhatToDo\",\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"option\", {\n                                    children: \"\\uCCAD\\uB8E1\\uB3D9 \\uD0C8\\uCD9C\\uC815 \\uD655\\uC778\"\n                                }, void 0, false, {\n                                    fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                    lineNumber: 17,\n                                    columnNumber: 21\n                                }, undefined)\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 16,\n                                columnNumber: 17\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                id: \"selectBtn\",\n                                children: \"\\uC120\\uD0DD\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 19,\n                                columnNumber: 17\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                id: \"pre-desc\",\n                                children: \"\\uCF85! \\uC18C\\uB9AC\\uAC00 \\uB4E4\\uB9AC\\uB294 \\uACF3\\uC744 \\uBCF4\\uB2C8 \\uC5D4\\uC9C0\\uB2C8\\uC5B4 O\\uD300\\uC774 \\uC18C\\uCD1D\\uC744 \\uACA8\\uB204\\uACE0 \\uC788\\uB2E4.\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 20,\n                                columnNumber: 17\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                        lineNumber: 15,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        id: \"blue-dragon\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"pin\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 25,\n                                columnNumber: 17\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"dong-name\",\n                                children: \"\\uCCAD\\uB8E1\\uB3D9\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 26,\n                                columnNumber: 17\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                        lineNumber: 24,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        id: \"red-bird\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"pin\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 29,\n                                columnNumber: 17\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"dong-name\",\n                                children: \"\\uC8FC\\uC791\\uB3D9\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 30,\n                                columnNumber: 17\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                        lineNumber: 28,\n                        columnNumber: 13\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                lineNumber: 14,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n                className: \"player-section\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_Players__WEBPACK_IMPORTED_MODULE_4__.Players, {}, void 0, false, {\n                    fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                    lineNumber: 34,\n                    columnNumber: 13\n                }, undefined)\n            }, void 0, false, {\n                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                lineNumber: 33,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n                className: \"description\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"battle-content\",\n                        children: selectOptions.map((v, i)=>{\n                            return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_SelectBtnDiv__WEBPACK_IMPORTED_MODULE_3__.SelectBtnDiv, {\n                                selectInfo: v\n                            }, v.value, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 39,\n                                columnNumber: 29\n                            }, undefined);\n                        })\n                    }, void 0, false, {\n                        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                        lineNumber: 37,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        id: \"black-tortoise\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"pin\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 43,\n                                columnNumber: 17\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"dong-name\",\n                                children: \"\\uD604\\uBB34\\uB3D9\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 44,\n                                columnNumber: 17\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                        lineNumber: 42,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        id: \"white-tiger\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"pin\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 47,\n                                columnNumber: 17\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"dong-name\",\n                                children: \"\\uBC31\\uD638\\uB3D9\"\n                            }, void 0, false, {\n                                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                                lineNumber: 48,\n                                columnNumber: 17\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                        lineNumber: 46,\n                        columnNumber: 13\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n                lineNumber: 36,\n                columnNumber: 9\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/jin/front/abdGame/pages/battle.js\",\n        lineNumber: 12,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Battle);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9iYXR0bGUuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFBc0M7QUFDRTtBQUNnQjtBQUNWO0FBQ0o7QUFDZDtBQUU1QixNQUFNTSxNQUFNLEdBQUcsSUFBTTtJQUNqQixNQUFNQyxVQUFVLEdBQUdGLHdEQUFXLENBQUMsQ0FBQ0csS0FBSyxHQUFLQSxLQUFLLENBQUNDLE1BQU0sQ0FBQztJQUN2RCxNQUFNQyxhQUFhLEdBQUdILFVBQVUsQ0FBQ0csYUFBYTtJQUM5QyxxQkFDQSw4REFBQ0MsS0FBRztRQUFDQyxTQUFTLEVBQUMsZUFBZTs7MEJBQzFCLDhEQUFDVixrREFBSTs7Ozt5QkFBRzswQkFDUiw4REFBQ1csU0FBTztnQkFBQ0QsU0FBUyxFQUFDLGFBQWE7O2tDQUM1Qiw4REFBQ0QsS0FBRzt3QkFBQ0MsU0FBUyxFQUFDLGdCQUFnQjs7MENBQzNCLDhEQUFDRSxRQUFNO2dDQUFDQyxFQUFFLEVBQUMsZ0JBQWdCOzBDQUN2Qiw0RUFBQ0MsUUFBTTs4Q0FBQyxvREFBVTs7Ozs7NkNBQXlCOzs7Ozt5Q0FDdEI7MENBQ3pCLDhEQUFDQyxRQUFNO2dDQUFDRixFQUFFLEVBQUMsV0FBVzswQ0FBQyxjQUFFOzs7Ozt5Q0FBYTswQ0FDbEMsOERBQUhKLEtBQUc7Z0NBQUNJLEVBQUUsRUFBQyxVQUFVOzBDQUFDLG9LQUVuQjs7Ozs7eUNBQU07Ozs7OztpQ0FDSjtrQ0FDTiw4REFBQ0osS0FBRzt3QkFBQ0ksRUFBRSxFQUFDLGFBQWE7OzBDQUNqQiw4REFBQ0osS0FBRztnQ0FBQ0MsU0FBUyxFQUFDLEtBQUs7Ozs7O3lDQUFPOzBDQUMzQiw4REFBQ0QsS0FBRztnQ0FBQ0MsU0FBUyxFQUFDLFdBQVc7MENBQUMsb0JBQUc7Ozs7O3lDQUFZOzs7Ozs7aUNBQ2xDO2tDQUNaLDhEQUFDRCxLQUFHO3dCQUFDSSxFQUFFLEVBQUMsVUFBVTs7MENBQ2QsOERBQUNKLEtBQUc7Z0NBQUNDLFNBQVMsRUFBQyxLQUFLOzs7Ozt5Q0FBTzswQ0FDM0IsOERBQUNELEtBQUc7Z0NBQUNDLFNBQVMsRUFBQyxXQUFXOzBDQUFDLG9CQUFHOzs7Ozt5Q0FBWTs7Ozs7O2lDQUNsQzs7Ozs7O3lCQUNOOzBCQUNWLDhEQUFDQyxTQUFPO2dCQUFDRCxTQUFTLEVBQUMsZ0JBQWdCOzBCQUMvQiw0RUFBQ1Isd0RBQU87Ozs7NkJBQUc7Ozs7O3lCQUNMOzBCQUNWLDhEQUFDUyxTQUFPO2dCQUFDRCxTQUFTLEVBQUMsYUFBYTs7a0NBQzVCLDhEQUFDRCxLQUFHO3dCQUFDQyxTQUFTLEVBQUMsZ0JBQWdCO2tDQUMxQkYsYUFBYSxDQUFDUSxHQUFHLENBQUMsQ0FBQ0MsQ0FBQyxFQUFDQyxDQUFDLEdBQUc7NEJBQ3RCLHFCQUFRLDhEQUFDakIsa0VBQVk7Z0NBQWVrQixVQUFVLEVBQUVGLENBQUM7K0JBQXRCQSxDQUFDLENBQUNHLEtBQUs7Ozs7eUNBQWtCLENBQUU7eUJBQ3pELENBQUM7Ozs7O2lDQUNBO2tDQUNOLDhEQUFDWCxLQUFHO3dCQUFDSSxFQUFFLEVBQUMsZ0JBQWdCOzswQ0FDcEIsOERBQUNKLEtBQUc7Z0NBQUNDLFNBQVMsRUFBQyxLQUFLOzs7Ozt5Q0FBTzswQ0FDM0IsOERBQUNELEtBQUc7Z0NBQUNDLFNBQVMsRUFBQyxXQUFXOzBDQUFDLG9CQUFHOzs7Ozt5Q0FBWTs7Ozs7O2lDQUNsQztrQ0FDWiw4REFBQ0QsS0FBRzt3QkFBQ0ksRUFBRSxFQUFDLGFBQWE7OzBDQUNqQiw4REFBQ0osS0FBRztnQ0FBQ0MsU0FBUyxFQUFDLEtBQUs7Ozs7O3lDQUFPOzBDQUMzQiw4REFBQ0QsS0FBRztnQ0FBQ0MsU0FBUyxFQUFDLFdBQVc7MENBQUMsb0JBQUc7Ozs7O3lDQUFNOzs7Ozs7aUNBQ2xDOzs7Ozs7eUJBQ0E7Ozs7OztpQkFDUixDQUNKO0NBQ0w7QUFFRCxpRUFBZU4sTUFBTSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYWJkZ2FtZS8uL3BhZ2VzL2JhdHRsZS5qcz8yYjdjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VSZWYgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBNZW51IH0gZnJvbSAnL2NvbXBvbmVudHMvTWVudSc7XG5pbXBvcnQgeyBTZWxlY3RCdG5EaXYgfSBmcm9tICcvY29tcG9uZW50cy9TZWxlY3RCdG5EaXYnO1xuaW1wb3J0IHsgUGxheWVycyB9IGZyb20gJy9jb21wb25lbnRzL1BsYXllcnMnO1xuaW1wb3J0IHsgdXNlU2VsZWN0b3IgfSBmcm9tICdyZWFjdC1yZWR1eCc7XG5pbXBvcnQgJ2FudGQvZGlzdC9hbnRkLmNzcyc7XG5cbmNvbnN0IEJhdHRsZSA9ICgpID0+IHtcbiAgICBjb25zdCBiYXR0bGVEYXRhID0gdXNlU2VsZWN0b3IoKHN0YXRlKSA9PiBzdGF0ZS5iYXR0bGUpO1xuICAgIGNvbnN0IHNlbGVjdE9wdGlvbnMgPSBiYXR0bGVEYXRhLnNlbGVjdE9wdGlvbnM7XG4gICAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImJhdHRsZS1zY3JpcHRcIj5cbiAgICAgICAgPE1lbnUgLz4gIFxuICAgICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJkZXNjcmlwdGlvblwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiYXR0bGUtY29udGVudFwiPlxuICAgICAgICAgICAgICAgIDxzZWxlY3QgaWQ9XCJzZWxlY3RXaGF0VG9Eb1wiPlxuICAgICAgICAgICAgICAgICAgICA8b3B0aW9uPuyyreujoeuPmSDtg4jstpzsoJUg7ZmV7J24PC9vcHRpb24+XG4gICAgICAgICAgICAgICAgPC9zZWxlY3Q+XG4gICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInNlbGVjdEJ0blwiPuyEoO2DnTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgIDxkaXYgaWQ9XCJwcmUtZGVzY1wiPlxuICAgICAgICAgICAgICAgICAgICDsvoUhIOyGjOumrOqwgCDrk6TrpqzripQg6rOz7J2EIOuztOuLiCDsl5Tsp4Dri4jslrQgT+2MgOydtCDshozstJ3snYQg6rKo64iE6rOgIOyeiOuLpC5cbiAgICAgICAgICAgICAgICA8L2Rpdj4gXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgaWQ9XCJibHVlLWRyYWdvblwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGluXCI+PC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkb25nLW5hbWVcIj7ssq3ro6Hrj5k8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBpZD1cInJlZC1iaXJkXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwaW5cIj48L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImRvbmctbmFtZVwiPuyjvOyekeuPmTwvZGl2PiAgXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9zZWN0aW9uPlxuICAgICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJwbGF5ZXItc2VjdGlvblwiPlxuICAgICAgICAgICAgPFBsYXllcnMgLz5cbiAgICAgICAgPC9zZWN0aW9uPiAgICBcbiAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwiZGVzY3JpcHRpb25cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmF0dGxlLWNvbnRlbnRcIj5cbiAgICAgICAgICAgICAgICB7c2VsZWN0T3B0aW9ucy5tYXAoKHYsaSk9PntcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuICg8U2VsZWN0QnRuRGl2IGtleT17di52YWx1ZX0gc2VsZWN0SW5mbz17dn0vPik7XG4gICAgICAgICAgICAgICAgfSl9XG4gICAgICAgICAgICA8L2Rpdj4gICAgXG4gICAgICAgICAgICA8ZGl2IGlkPVwiYmxhY2stdG9ydG9pc2VcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInBpblwiPjwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZG9uZy1uYW1lXCI+7ZiE66y064+ZPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgaWQ9XCJ3aGl0ZS10aWdlclwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicGluXCI+PC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkb25nLW5hbWVcIj7rsLHtmLjrj5k8L2Rpdj4gIFxuICAgICAgICAgICAgPC9kaXY+ICAgIFxuICAgICAgICA8L3NlY3Rpb24+XG4gICAgPC9kaXY+XG4gICAgKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgQmF0dGxlOyJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZVJlZiIsIk1lbnUiLCJTZWxlY3RCdG5EaXYiLCJQbGF5ZXJzIiwidXNlU2VsZWN0b3IiLCJCYXR0bGUiLCJiYXR0bGVEYXRhIiwic3RhdGUiLCJiYXR0bGUiLCJzZWxlY3RPcHRpb25zIiwiZGl2IiwiY2xhc3NOYW1lIiwic2VjdGlvbiIsInNlbGVjdCIsImlkIiwib3B0aW9uIiwiYnV0dG9uIiwibWFwIiwidiIsImkiLCJzZWxlY3RJbmZvIiwidmFsdWUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/battle.js\n");
-
-/***/ }),
-
-/***/ "./reducers/memberStat.js":
-/*!********************************!*\
-  !*** ./reducers/memberStat.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"MEMBER_STAT\": () => (/* binding */ MEMBER_STAT),\n/* harmony export */   \"MEMBER_STAT_VISIBLE\": () => (/* binding */ MEMBER_STAT_VISIBLE),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"initialState\": () => (/* binding */ initialState)\n/* harmony export */ });\nconst MEMBER_STAT = \"MEMBER_STAT\";\nconst MEMBER_STAT_VISIBLE = \"MEMBER_STAT_VISIBLE\";\nconst initialState = {\n    isStatsModalVisible: false,\n    pmh: null,\n    sgh: null,\n    shr: null,\n    ygy: null,\n    pay: null\n};\nconst reducer = (state = initialState, action)=>{\n    switch(action.type){\n        case \"MEMBER_STAT\":\n            return {\n                ...state\n            };\n        case \"MEMBER_STAT_SUCCESS\":\n            return {\n                ...state,\n                pmh: action.data.charaterStatus[\"\\uBC15\\uBB34\\uD604\"],\n                sgh: action.data.charaterStatus[\"\\uC11C\\uC9C0\\uD601\"],\n                shr: action.data.charaterStatus[\"\\uC2E0\\uD574\\uB7C9\"],\n                ygy: action.data.charaterStatus[\"\\uC720\\uAE08\\uC774\"],\n                pay: action.data.charaterStatus[\"\\uBC31\\uC560\\uC601\"]\n            };\n        case \"MEMBER_STAT_VISIBLE\":\n            return {\n                ...state,\n                isStatsModalVisible: action.data.isStatsModalVisible\n            };\n        default:\n            return state;\n    }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWR1Y2Vycy9tZW1iZXJTdGF0LmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBTyxNQUFNQSxXQUFXLEdBQUcsYUFBYSxDQUFDO0FBQ2xDLE1BQU1DLG1CQUFtQixHQUFHLHFCQUFxQixDQUFDO0FBRWxELE1BQU1DLFlBQVksR0FBRztJQUN4QkMsbUJBQW1CLEVBQUUsS0FBSztJQUMxQkMsR0FBRyxFQUFFLElBQUk7SUFDVEMsR0FBRyxFQUFFLElBQUk7SUFDVEMsR0FBRyxFQUFFLElBQUk7SUFDVEMsR0FBRyxFQUFFLElBQUk7SUFDVEMsR0FBRyxFQUFFLElBQUk7Q0FDWjtBQUVELE1BQU1DLE9BQU8sR0FBRyxDQUFDQyxLQUFLLEdBQUdSLFlBQVksRUFBRVMsTUFBTSxHQUFLO0lBQzlDLE9BQVFBLE1BQU0sQ0FBQ0MsSUFBSTtRQUNmLEtBQUssYUFBYTtZQUNkLE9BQU87Z0JBQ0gsR0FBR0YsS0FBSzthQUNYO1FBQ0wsS0FBSyxxQkFBcUI7WUFDdEIsT0FBTztnQkFDSCxHQUFHQSxLQUFLO2dCQUNSTixHQUFHLEVBQUVPLE1BQU0sQ0FBQ0UsSUFBSSxDQUFDQyxjQUFjLENBQUMsb0JBQUssQ0FBTztnQkFDdENULEdBQUgsRUFBRU0sTUFBTSxDQUFDRSxJQUFJLENBQUNDLGNBQWMsQ0FBQyxvQkFBSyxDQUFPO2dCQUN0Q1IsR0FBSCxFQUFFSyxNQUFNLENBQUNFLElBQUksQ0FBQ0MsY0FBYyxDQUFDLG9CQUFLLENBQU87Z0JBQ3RDUCxHQUFILEVBQUVJLE1BQU0sQ0FBQ0UsSUFBSSxDQUFDQyxjQUFjLENBQUMsb0JBQUssQ0FBTztnQkFDdENOLEdBQUgsRUFBRUcsTUFBTSxDQUFDRSxJQUFJLENBQUNDLGNBQWMsQ0FBQyxvQkFBSyxDQUFDO2FBQ3pDO1FBQ0wsS0FBSyxxQkFBcUI7WUFDdEIsT0FBTztnQkFDSCxHQUFHSixLQUFLO2dCQUNSUCxtQkFBbUIsRUFBRVEsTUFBTSxDQUFDRSxJQUFJLENBQUNWLG1CQUFtQjthQUN2RDtRQUNMO1lBQ0ksT0FBT08sS0FBSyxDQUFDO0tBQ3BCO0NBQ0o7QUFFRCxpRUFBZUQsT0FBTyxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYWJkZ2FtZS8uL3JlZHVjZXJzL21lbWJlclN0YXQuanM/NzFhZSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgTUVNQkVSX1NUQVQgPSAnTUVNQkVSX1NUQVQnO1xuZXhwb3J0IGNvbnN0IE1FTUJFUl9TVEFUX1ZJU0lCTEUgPSAnTUVNQkVSX1NUQVRfVklTSUJMRSc7XG5cbmV4cG9ydCBjb25zdCBpbml0aWFsU3RhdGUgPSB7XG4gICAgaXNTdGF0c01vZGFsVmlzaWJsZTogZmFsc2UsXG4gICAgcG1oOiBudWxsLFxuICAgIHNnaDogbnVsbCxcbiAgICBzaHI6IG51bGwsXG4gICAgeWd5OiBudWxsLFxuICAgIHBheTogbnVsbFxufVxuXG5jb25zdCByZWR1Y2VyID0gKHN0YXRlID0gaW5pdGlhbFN0YXRlLCBhY3Rpb24pID0+IHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ01FTUJFUl9TVEFUJzogXG4gICAgICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgICAgIC4uLnN0YXRlLFxuICAgICAgICAgICAgfVxuICAgICAgICBjYXNlICdNRU1CRVJfU1RBVF9TVUNDRVNTJzogXG4gICAgICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgICAgIC4uLnN0YXRlLFxuICAgICAgICAgICAgICAgIHBtaDogYWN0aW9uLmRhdGEuY2hhcmF0ZXJTdGF0dXNbJ+uwleustO2YhCddLFxuICAgICAgICAgICAgICAgIHNnaDogYWN0aW9uLmRhdGEuY2hhcmF0ZXJTdGF0dXNbJ+yEnOyngO2YgSddLFxuICAgICAgICAgICAgICAgIHNocjogYWN0aW9uLmRhdGEuY2hhcmF0ZXJTdGF0dXNbJ+yLoO2VtOufiSddLFxuICAgICAgICAgICAgICAgIHlneTogYWN0aW9uLmRhdGEuY2hhcmF0ZXJTdGF0dXNbJ+ycoOq4iOydtCddLFxuICAgICAgICAgICAgICAgIHBheTogYWN0aW9uLmRhdGEuY2hhcmF0ZXJTdGF0dXNbJ+uwseyVoOyYgSddXG4gICAgICAgICAgICB9ICAgIFxuICAgICAgICBjYXNlICdNRU1CRVJfU1RBVF9WSVNJQkxFJzpcbiAgICAgICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXG4gICAgICAgICAgICAgICAgaXNTdGF0c01vZGFsVmlzaWJsZTogYWN0aW9uLmRhdGEuaXNTdGF0c01vZGFsVmlzaWJsZSxcbiAgICAgICAgICAgIH1cbiAgICAgICAgZGVmYXVsdDpcbiAgICAgICAgICAgIHJldHVybiBzdGF0ZTtcbiAgICB9XG59O1xuXG5leHBvcnQgZGVmYXVsdCByZWR1Y2VyOyJdLCJuYW1lcyI6WyJNRU1CRVJfU1RBVCIsIk1FTUJFUl9TVEFUX1ZJU0lCTEUiLCJpbml0aWFsU3RhdGUiLCJpc1N0YXRzTW9kYWxWaXNpYmxlIiwicG1oIiwic2doIiwic2hyIiwieWd5IiwicGF5IiwicmVkdWNlciIsInN0YXRlIiwiYWN0aW9uIiwidHlwZSIsImRhdGEiLCJjaGFyYXRlclN0YXR1cyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./reducers/memberStat.js\n");
-
-/***/ }),
-
-/***/ "./node_modules/antd/dist/antd.css":
-/*!*****************************************!*\
-  !*** ./node_modules/antd/dist/antd.css ***!
-  \*****************************************/
+/***/ 722:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "antd":
-/*!***********************!*\
-  !*** external "antd" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("antd");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 689:
 /***/ ((module) => {
 
 "use strict";
@@ -110,10 +852,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-redux":
-/*!******************************!*\
-  !*** external "react-redux" ***!
-  \******************************/
+/***/ 22:
 /***/ ((module) => {
 
 "use strict";
@@ -121,14 +860,11 @@ module.exports = require("react-redux");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -139,7 +875,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/battle.js"));
+var __webpack_exports__ = __webpack_require__.X(0, [474,472], () => (__webpack_exec__(479)));
 module.exports = __webpack_exports__;
 
 })();

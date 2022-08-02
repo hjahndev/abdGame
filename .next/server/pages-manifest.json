@@ -1,5 +1,10 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/battle": "pages/battle.js",
+  "/centerDong": "pages/centerDong.js",
+  "/elevator": "pages/elevator.js",
+  "/": "pages/index.js",
+  "/intro": "pages/intro.js",
   "/_document": "pages/_document.js"
 }
