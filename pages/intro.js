@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Router,{ useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { BATTLE } from '../reducers/battle';
 
 const Intro = () => {
     const [script, setScript] = useState(`다음날 아침, 나는 누군가 깨우는 소리에 눈을 떴다.`);
@@ -10,11 +12,17 @@ const Intro = () => {
     const router = useRouter();
     const interval = useRef();
     const index = useRef(0);
+    const dispatch = useDispatch();
+    const state = useSelector((state) => state);
 
     useEffect(()=>{
         interval.current = setInterval(()=> {
             if(index.current > 2) {
                 clearInterval(interval.current);
+                dispatch({
+                    type: BATTLE,
+                    data: {status: 'onGoing', action: 'event', gameToken: state.index.gameToken }
+                });
                 router.push('/battle');  
                 return;                          
             }

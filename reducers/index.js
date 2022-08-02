@@ -1,6 +1,6 @@
 import { HYDRATE } from 'next-redux-wrapper';
+import memberStat from './memberStat';
 import battle from './battle';
-import memberStat from './memberStat'
 import { combineReducers } from 'redux';
 
 export const START = 'START';
@@ -113,8 +113,8 @@ const rootReducer = combineReducers({
                 return state;    
         }
     },
-    memberStat,
-    battle
+    battle,
+    memberStat
 });
 
 export default rootReducer;

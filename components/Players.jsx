@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Players = ({npc, player}) => {
+export const Players = () => {
+    const player = {att: "5", hp: "50", lev: "1", maxHp: "50", maxMp: "100", mp: "100", 
+    name: "hj", reqdXp: "15", xp: "0"};
+    const npc = {att: "8", maxHp: "60", line: "NO_TEXT", name: "적C", hp: "60", xp: "10"};
+    
     return (
         <>
             <div className="enemy-stat">

@@ -1,5 +1,8 @@
 const initialState = {
-    npc: {att: "8", maxHp: "60", line: "NO_TEXT", name: "적C", hp: "60", xp: "10"},        
+    player: null,
+    npc: null,   
+    select: null,    
+    scripts: null, 
 }
 
 export const BATTLE = 'BATTLE';
@@ -8,11 +11,19 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'BATTLE':
             return {
-                ...state,
-                player: action.data,
-                npc: action.data,
+                ...state
             }
+        case 'BATTLE_SUCCESS':
+            return {
+                ...state,
+                player: action.data.player,
+                npc: action.data.npc,
+                select: action.data.select,
+                scripts: action.data.scripts
+            }    
         default: 
             return state;
     }
 };
+
+export default reducer;

@@ -89,7 +89,6 @@ function* watchSelect(action) {
     }
 }
 function* watchMemberStat(action) {
-    console.log(action);
     try {
         const result = yield call(memberStatAPI, action.data);
         yield put({
@@ -103,6 +102,21 @@ function* watchMemberStat(action) {
         })
     }
 }
+function* watchBattle(action) {
+    console.log(action);
+    try {
+        const result = yield call(jobAPI, action.data);
+        yield put({
+            type: 'BATTLE_SUCCESS',
+            data: result.data
+        })
+    } catch (err) {
+        yield put({
+            type: 'BATTLE_FAILURE',
+            data: err.response.data,
+        })
+    }
+}
 export default function* rootSaga() {
     yield all([
         takeLatest('START', watchStart),
@@ -111,5 +125,6 @@ export default function* rootSaga() {
         takeLatest('PLAY', watchPlay),
         takeLatest('SELECT', watchSelect),
         takeLatest('MEMBER_STAT', watchMemberStat),
+        takeLatest('BATTLE', watchBattle),
     ]);
 }
